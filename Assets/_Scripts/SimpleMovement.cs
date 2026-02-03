@@ -12,7 +12,7 @@ public class SimpleMovement : MonoBehaviour
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
-        inputAction = playerInput.actions.FindAction("Move");
+        //inputAction = playerInput.actions.FindAction("Move");
         rigidbody = GetComponent<Rigidbody>();
     }
 
