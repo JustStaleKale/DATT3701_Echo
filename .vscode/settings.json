@@ -66,5 +66,5 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj"
     },
-    "dotnet.defaultSolution": "DATT3701_Echo.slnx"
+    "dotnet.defaultSolution": "3701GameEchi.slnx"
 }
