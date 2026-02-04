@@ -1454,6 +1454,50 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199590389}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &219462512 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1547549758273011619, guid: 93848e1785c844643b6dea8824243a57, type: 3}
+  m_PrefabInstance: {fileID: 9073791113279029532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &219462514 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8120287443896961857, guid: 93848e1785c844643b6dea8824243a57, type: 3}
+  m_PrefabInstance: {fileID: 9073791113279029532}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219462512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e68674683d6160e40ba66da5a51802ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioLighting
+--- !u!114 &219462517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219462512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a0975beb824f8499b799ad9f98dc5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 0867124af6a5b844aa73d9b95cdb3050, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 219462514}
+        m_TargetAssemblyTypeName: AudioLighting, Assembly-CSharp
+        m_MethodName: Ping
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &252821379
 GameObject:
   m_ObjectHideFlags: 0
@@ -9860,6 +9904,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraPivot
       objectReference: {fileID: 0}
+    - target: {fileID: 6456218187251834943, guid: 68461a0ca4183fd47af3b1fe2ae285f5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9876,6 +9924,14 @@ PrefabInstance:
     - target: {fileID: 5355775105184246153, guid: 93848e1785c844643b6dea8824243a57, type: 3}
       propertyPath: m_Name
       value: Jammo_LowPoly
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069829896416963924, guid: 93848e1785c844643b6dea8824243a57, type: 3}
+      propertyPath: pingEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 0867124af6a5b844aa73d9b95cdb3050, type: 2}
+    - target: {fileID: 8069829896416963924, guid: 93848e1785c844643b6dea8824243a57, type: 3}
+      propertyPath: pingCooldown
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8937623043412712346, guid: 93848e1785c844643b6dea8824243a57, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9920,7 +9976,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1547549758273011619, guid: 93848e1785c844643b6dea8824243a57, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 219462517}
   m_SourcePrefab: {fileID: 100100000, guid: 93848e1785c844643b6dea8824243a57, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

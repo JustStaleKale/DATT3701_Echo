@@ -11,6 +11,8 @@ public class MovementController : MonoBehaviour
     public AudioSource footstepSound;
     public GameEvent pingEvent;
 
+    public float pingCooldown = 1f;
+
     private bool isWaitingForFootstep = false;
     public float footstepInterval = 0.5f;
 
@@ -89,7 +91,7 @@ public class MovementController : MonoBehaviour
         {
             canPing = false;
             pingEvent.Raise(this, true);
-            yield return new WaitForSeconds(1f); // Cooldown duration
+            yield return new WaitForSeconds(pingCooldown); // Cooldown duration
             canPing = true;
         }
     }
@@ -159,7 +161,7 @@ public class MovementController : MonoBehaviour
     {
         if (characterController.isGrounded)
         {
-            Debug.Log("Grounded");
+            //Debug.Log("Grounded");
             verticalVelocity = 0f;
         }
         else
