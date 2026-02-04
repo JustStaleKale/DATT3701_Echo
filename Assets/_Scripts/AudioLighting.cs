@@ -3,7 +3,7 @@ using UnityEngine;
 public class AudioLighting : MonoBehaviour
 {
     public AudioSource audioSource;
-    public Light targetLight;
+    private Light targetLight;
 
     public float updateInterval = 0.1f;
     public int sampleSize = 512;
@@ -26,7 +26,7 @@ public class AudioLighting : MonoBehaviour
 
         if (targetLight == null)
         {
-            targetLight = GetComponent<Light>();
+            targetLight = gameObject.GetComponent<Light>();
         }
 
         audioSampleData = new float[sampleSize];
