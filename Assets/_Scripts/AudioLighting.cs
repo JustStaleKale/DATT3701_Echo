@@ -3,7 +3,7 @@ using UnityEngine;
 public class AudioLighting : MonoBehaviour
 {
     public AudioSource audioSource;
-    private Light targetLight;
+    public Light targetLight;
 
     public float updateInterval = 0.1f;
     public int sampleSize = 512;
@@ -37,7 +37,7 @@ public class AudioLighting : MonoBehaviour
     {
         if (pingActive)
         {
-            Debug.Log(countSeconds);
+            //Debug.Log(countSeconds);
             countSeconds++;
             if (countSeconds >= pingDuration)
             {
