@@ -25,7 +25,7 @@ public class UIFillBar : MonoBehaviour
     void HandleInput()
     {
         if (Keyboard.current != null &&
-            Keyboard.current.eKey.wasPressedThisFrame &&
+            Keyboard.current.qKey.wasPressedThisFrame &&
             currentCharge >= cost)
         {
             UseBar();
