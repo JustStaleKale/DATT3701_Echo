@@ -11,10 +11,14 @@ public class AudioLighting : MonoBehaviour
     private float[] audioSampleData;
     public float clipLoudness = 0f;
     public float minIntensity = 0f;
-    public float maxIntensity = 8f;
+    public float maxIntensity = 15f;
+    public int pingDuration = 10;
+    private bool pingActive = false;
+    private int countSeconds = 0;
 
     private void Start()
     {
+        countSeconds = 0;
         if (audioSource == null)
         {
             audioSource = GetComponent<AudioSource>();
@@ -31,6 +35,19 @@ public class AudioLighting : MonoBehaviour
 
     private void UpdateAudioData()
     {
+        if (pingActive)
+        {
+            Debug.Log(countSeconds);
+            countSeconds++;
+            if (countSeconds >= pingDuration)
+            {
+                pingActive = false;
+                countSeconds = 0;
+            }
+            targetLight.intensity = maxIntensity;
+            //pingActive = false;
+            return;
+        }
         if (audioSource.isPlaying)
         {
             audioSource.GetOutputData(audioSampleData, 0);
@@ -49,5 +66,11 @@ public class AudioLighting : MonoBehaviour
         {
             targetLight.intensity = minIntensity;
         }
+    }
+
+    public void Ping(Component sender, object data)
+    {
+        pingActive = (bool)data;
+        targetLight.intensity = maxIntensity;
     }
 }

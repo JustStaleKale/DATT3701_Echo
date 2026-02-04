@@ -9,6 +9,7 @@ public class MovementController : MonoBehaviour
     public CharacterController characterController;
     public Animator animator;
     public AudioSource footstepSound;
+    public GameEvent pingEvent;
 
     private bool isWaitingForFootstep = false;
     public float footstepInterval = 0.5f;
@@ -26,6 +27,8 @@ public class MovementController : MonoBehaviour
     public float crouchMoveSpeed = 0.5f;
     public float rotationSpeed = 1f;
 
+    private bool canPing = true;
+
     void Awake()
     {
         playerInput = new PlayerInput();
@@ -42,6 +45,8 @@ public class MovementController : MonoBehaviour
         playerInput.Player.CrouchToggle.performed += OnCrouchToggleInput;
         playerInput.Player.Crouch.started += OnCrouchHoldInput;
         playerInput.Player.Crouch.canceled += OnCrouchHoldInput;
+
+        playerInput.Player.Ping.performed += HandlePing;
     }
      
     private void OnMovementInput(InputAction.CallbackContext ctx)
@@ -63,6 +68,27 @@ public class MovementController : MonoBehaviour
     {
         CrouchPressed = ctx.ReadValueAsButton();
     }
+
+    private void HandlePing(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+            // Implement ping logic here, e.g., trigger a visual effect or sound
+            StartCoroutine(Ping());
+        }
+    }
+
+    IEnumerator Ping()
+    {
+        if (canPing)
+        {
+            canPing = false;
+            pingEvent.Raise(this, true);
+            yield return new WaitForSeconds(1f); // Cooldown duration
+            canPing = true;
+        }
+    }
+
 
     void OnEnable()
     {
