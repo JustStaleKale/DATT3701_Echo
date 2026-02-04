@@ -176,3 +176,4 @@ public class MovementController : MonoBehaviour
         characterController.Move(moveDirection * Time.deltaTime * currentSpeed);
     }
 }
+

@@ -7922,6 +7922,7 @@ MonoBehaviour:
   footstepInterval: 0.5
   moveSpeed: 2
   crouchMoveSpeed: 1
+  runSpeed: 2
   rotationSpeed: 10
 --- !u!95 &1642565508 stripped
 Animator:
