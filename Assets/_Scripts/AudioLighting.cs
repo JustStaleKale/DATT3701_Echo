@@ -26,7 +26,7 @@ public class AudioLighting : MonoBehaviour
 
         if (targetLight == null)
         {
-            targetLight = GetComponent<Light>();
+            targetLight = gameObject.GetComponent<Light>();
         }
 
         audioSampleData = new float[sampleSize];
@@ -37,7 +37,7 @@ public class AudioLighting : MonoBehaviour
     {
         if (pingActive)
         {
-            Debug.Log(countSeconds);
+            //Debug.Log(countSeconds);
             countSeconds++;
             if (countSeconds >= pingDuration)
             {
