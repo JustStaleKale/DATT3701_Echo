@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
 
-public class MovementController : MonoBehaviour
+public class MovementControllerOld : MonoBehaviour
 {
 
     public PlayerInput playerInput;

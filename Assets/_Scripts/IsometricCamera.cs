@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class IsometricCamera : MonoBehaviour
 {
-    private Vector3 offset = new Vector3(0f, 1f, 0f);
+    public Vector3 offset = new Vector3(0f, 2f, 0f);
     public Transform target;
     private float smoothTime = 0.1f;
     private Vector3 velocity = Vector3.zero;
