@@ -26,10 +26,10 @@ public class MovementController : MonoBehaviour
     private bool CrouchPressed = false;
     private bool RunPressed = false;
 
-    public float moveSpeed = 1f;
-    public float crouchMoveSpeed = 0.5f;
-    public float runSpeed = 2f;
-    public float rotationSpeed = 1f;
+    public float moveSpeed = 2f;
+    public float crouchMoveSpeed = 1f;
+    public float runSpeed = 4f;
+    public float rotationSpeed = 10f;
 
     private bool canPing = true;
 
@@ -57,8 +57,8 @@ public class MovementController : MonoBehaviour
         playerInput.Player.Crouch.canceled += OnCrouchHoldInput;
 
         // Run
-        playerInput.Player.Run.started += ctx => RunPressed = true;
-        playerInput.Player.Run.canceled += ctx => RunPressed = false;
+        playerInput.Player.Run.started += OnSprintInput;
+        playerInput.Player.Run.canceled += OnSprintInput;
 
         // Ping
         playerInput.Player.Ping.performed += HandlePing;
@@ -73,13 +73,19 @@ public class MovementController : MonoBehaviour
 
     private void OnCrouchToggleInput(InputAction.CallbackContext ctx)
     {
-        if (ctx.performed)
+        if (ctx.performed) {
             CrouchPressed = !CrouchPressed;
+        }
     }
 
     private void OnCrouchHoldInput(InputAction.CallbackContext ctx)
     {
         CrouchPressed = ctx.ReadValueAsButton();
+    }
+
+    private void OnSprintInput(InputAction.CallbackContext ctx)
+    {
+        RunPressed = ctx.ReadValueAsButton();
     }
 
     private void HandlePing(InputAction.CallbackContext ctx)
@@ -121,6 +127,8 @@ public class MovementController : MonoBehaviour
         if (isMoving)
         {
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
+            targetRotation.x = 0;
+            targetRotation.z = 0;
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
     }
