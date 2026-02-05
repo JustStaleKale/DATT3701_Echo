@@ -8,7 +8,7 @@ public class OcclusionBubble : MonoBehaviour
     public Collider bubbleCollider;
     public float minRange = 2f;
     public float maxRange = 5f;
-    public float duration = 0.5f;
+    public float duration = 1f;
 
     void Start()
     {
@@ -39,7 +39,7 @@ public class OcclusionBubble : MonoBehaviour
     {
         float elapsedTime = 0f;
 
-        while (elapsedTime < duration)
+        while (elapsedTime < duration/2)
         {
             transform.localScale = Vector3.Lerp(initialScale, maxScale, (elapsedTime / duration));
             elapsedTime += Time.deltaTime;
@@ -48,7 +48,7 @@ public class OcclusionBubble : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
         elapsedTime = 0f;
-        while (elapsedTime < duration)
+        while (elapsedTime < duration/2)
         {
             transform.localScale = Vector3.Lerp(maxScale, initialScale, (elapsedTime / duration));
             elapsedTime += Time.deltaTime;
@@ -68,7 +68,7 @@ public class OcclusionBubble : MonoBehaviour
                 c.gameObject.layer = LayerMask.NameToLayer("Revealed");
             }
         }
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(duration);
         foreach (Collider c in colliders)
         {
             if (c.gameObject.layer == LayerMask.NameToLayer("Revealed"))

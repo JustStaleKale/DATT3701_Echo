@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class MovementController : MonoBehaviour
 {
@@ -9,8 +10,19 @@ public class MovementController : MonoBehaviour
     public Animator animator;
     public AudioSource footstepSound;
     public GameEvent pingEvent;
+    public Transform shootingPoint;
+    public GameObject echoSignalPrefab;
+    public PlayerStats playerStats;
+    public GameEvent UIBarEvent;
 
-    public float pingCooldown = 1f;
+    private float echoForce = 100f;
+    private float pingCooldown = 1f;
+    private float moveSpeed = 2f;
+    private float crouchMoveSpeed = 1f;
+    private float runSpeed = 4f;
+    private float rotationSpeed = 10f;
+
+    
 
     private bool isWaitingForFootstep = false;
     public float footstepInterval = 0.5f;
@@ -26,15 +38,14 @@ public class MovementController : MonoBehaviour
     private bool CrouchPressed = false;
     private bool RunPressed = false;
 
-    public float moveSpeed = 2f;
-    public float crouchMoveSpeed = 1f;
-    public float runSpeed = 4f;
-    public float rotationSpeed = 10f;
+    
 
     private bool canPing = true;
 
     private float gravity = -9.81f;
     private float verticalVelocity = 0f;
+
+    private bool isReloading = false;
 
     void Awake()
     {
@@ -45,6 +56,14 @@ public class MovementController : MonoBehaviour
         isWalkingHash = Animator.StringToHash("isWalking");
         isCrouchingHash = Animator.StringToHash("isCrouching");
         isRunningHash = Animator.StringToHash("isRunning");
+
+        playerStats.currentAmmo = playerStats.maxAmmo;
+        echoForce = playerStats.echoForce;
+        pingCooldown = playerStats.pingCooldown;
+        moveSpeed = playerStats.walkSpeed;
+        crouchMoveSpeed = playerStats.crouchSpeed;
+        runSpeed = playerStats.runSpeed;
+        rotationSpeed = playerStats.rotationSpeed;
 
         // Movement
         playerInput.Player.Move.started += OnMovementInput;
@@ -62,6 +81,7 @@ public class MovementController : MonoBehaviour
 
         // Ping
         playerInput.Player.Ping.performed += HandlePing;
+        playerInput.Player.Attack.performed += HandleShootPing;
     }
 
     private void OnMovementInput(InputAction.CallbackContext ctx)
@@ -90,8 +110,46 @@ public class MovementController : MonoBehaviour
 
     private void HandlePing(InputAction.CallbackContext ctx)
     {
-        if (ctx.performed)
+        if (ctx.performed) {
             StartCoroutine(Ping());
+            UIBarEvent.Raise(this, null);
+        }
+    }
+
+    private void HandleShootPing(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed && canPing) {
+            ShootPing();
+            UIBarEvent.Raise(this, null);
+        }
+    }
+
+    private void ShootPing()
+    {
+        if (playerStats.currentAmmo > 0)
+        {
+            playerStats.currentAmmo--;
+            GameObject echoInstance = Instantiate(echoSignalPrefab, shootingPoint.position, Quaternion.identity);
+            Rigidbody echoRb = echoInstance.GetComponent<Rigidbody>();
+            echoRb.AddForce(shootingPoint.forward * echoForce, ForceMode.Impulse);
+            
+            if (!isReloading && playerStats.currentAmmo < playerStats.maxAmmo)
+            {
+                StartCoroutine(ReloadAmmo());
+            }
+            
+        } 
+    }
+
+    IEnumerator ReloadAmmo()
+    {
+        while (playerStats.currentAmmo < playerStats.maxAmmo)
+        {
+            isReloading = true;
+            yield return new WaitForSeconds(playerStats.reloadTime);
+            playerStats.currentAmmo++;
+        }
+        isReloading = false;
     }
 
     IEnumerator Ping()
@@ -135,10 +193,10 @@ public class MovementController : MonoBehaviour
 
     private IEnumerator FootstepSounds()
     {
-        while (isMoving && !CrouchPressed)
+        while (isMoving && !isWaitingForFootstep && !CrouchPressed)
         {
-            footstepSound.Play();
             isWaitingForFootstep = true;
+            footstepSound.Play();
             yield return new WaitForSeconds(footstepInterval);
             isWaitingForFootstep = false;
         }

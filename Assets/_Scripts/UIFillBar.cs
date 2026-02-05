@@ -8,32 +8,38 @@ public class UIFillBar : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioClip pingClip;
+    public PlayerStats playerStats;
 
-    public float chargeSpeed = 0.5f;
-    public float cost = 1f;
+    private float chargeSpeed = 0.25f;
+    private float cost = 1f;
 
     float currentCharge = 1f;
     bool isRecharging = false;
 
+    void Start()
+    {
+        chargeSpeed = 1/playerStats.pingCooldown;
+    }
+
     void Update()
     {
-        HandleInput();
+        //HandleInput();
         RechargeBar();
         UpdateUI();
     }
 
-    void HandleInput()
-    {
-        if (Keyboard.current != null &&
-            Keyboard.current.qKey.wasPressedThisFrame &&
-            currentCharge >= cost)
-        {
-            UseBar();
-        }
-    }
+    // void HandleInput()
+    // {
+    //     if (Keyboard.current != null &&
+    //         Keyboard.current.qKey.wasPressedThisFrame &&
+    //         currentCharge >= cost)
+    //     {
+    //         UseBar();
+    //     }
+    // }
 
 
-    void UseBar()
+    public void UseBar()
     {
         currentCharge -= cost;
         currentCharge = Mathf.Clamp01(currentCharge);
