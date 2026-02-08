@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
-using Unity.VisualScripting;
+
 
 public class MovementController : MonoBehaviour
 {
@@ -14,6 +14,8 @@ public class MovementController : MonoBehaviour
     public GameObject echoSignalPrefab;
     public PlayerStats playerStats;
     public GameEvent UIBarEvent;
+
+    public bool isometricMovement = true;
 
     private float echoForce = 100f;
     private float pingCooldown = 1f;
@@ -33,6 +35,7 @@ public class MovementController : MonoBehaviour
 
     private Vector2 inputVector;
     private Vector3 moveDirection;
+    private Vector3 isoMoveDirection;
     private bool isMoving;
 
     private bool CrouchPressed = false;
@@ -110,7 +113,7 @@ public class MovementController : MonoBehaviour
 
     private void HandlePing(InputAction.CallbackContext ctx)
     {
-        if (ctx.performed) {
+        if (ctx.performed && canPing) {
             StartCoroutine(Ping());
             UIBarEvent.Raise(this, null);
         }
@@ -182,9 +185,19 @@ public class MovementController : MonoBehaviour
 
     private void HandleRotation()
     {
+        
+        if (isometricMovement)
+        {
+            var matrix = Matrix4x4.Rotate(Quaternion.Euler(0, 45, 0));
+            isoMoveDirection = matrix.MultiplyPoint3x4(moveDirection);
+        } else
+        {
+            isoMoveDirection = moveDirection;
+        }
+
         if (isMoving)
         {
-            Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
+            Quaternion targetRotation = Quaternion.LookRotation(isoMoveDirection);
             targetRotation.x = 0;
             targetRotation.z = 0;
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
@@ -239,7 +252,7 @@ public class MovementController : MonoBehaviour
         else if (RunPressed)
             currentSpeed = runSpeed;
 
-        characterController.Move(moveDirection * Time.deltaTime * currentSpeed);
+        characterController.Move(isoMoveDirection * Time.deltaTime * currentSpeed);
     }
 }
 
