@@ -16,7 +16,7 @@ MonoBehaviour:
   crouchSpeed: 1
   runSpeed: 4
   rotationSpeed: 10
-  echoForce: 100
+  echoForce: 50
   pingCooldown: 2
   currentAmmo: 1
   maxAmmo: 3

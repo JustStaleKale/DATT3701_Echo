@@ -22,7 +22,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -52,7 +52,7 @@ ModelImporter:
     weldVertices: 1
     bakeAxisConversion: 0
     preserveHierarchy: 0
-    skinWeightsMode: 0
+    skinWeightsMode: 1
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
     optimizeBones: 1
@@ -83,7 +83,37 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: Simple Low-poly Spaceship door by Jungle Jim(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Empty.001
+      parentName: Simple Low-poly Spaceship door by Jungle Jim(Clone)
+      position: {x: -1.5379537, y: -0.1682949, z: -0.000000059604645}
+      rotation: {x: 0.000000141065, y: 0, z: -0, w: 1}
+      scale: {x: 34.945225, y: 34.945225, z: 34.945225}
+    - name: Empty.002
+      parentName: Simple Low-poly Spaceship door by Jungle Jim(Clone)
+      position: {x: -1.5379537, y: -0.1682949, z: -0.000000059604645}
+      rotation: {x: 0.000000141065, y: 0, z: -0, w: 1}
+      scale: {x: 34.945225, y: 34.945225, z: 34.945225}
+    - name: Empty.003
+      parentName: Simple Low-poly Spaceship door by Jungle Jim(Clone)
+      position: {x: -1.5379537, y: -0.1682949, z: -0.000000059604645}
+      rotation: {x: 0.000000141065, y: 0, z: -0, w: 1}
+      scale: {x: 34.945225, y: 34.945225, z: 34.945225}
+    - name: Plane
+      parentName: Simple Low-poly Spaceship door by Jungle Jim(Clone)
+      position: {x: -1.4947789, y: 0.100677565, z: -0.038656443}
+      rotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+      scale: {x: 260.58365, y: 100, z: 100}
+    - name: Plane.001
+      parentName: Simple Low-poly Spaceship door by Jungle Jim(Clone)
+      position: {x: -1.7483526, y: -0.8878199, z: -0.3807963}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 256.54266, y: 237.8802, z: 100}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -92,15 +122,15 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: 
+    rootMotionBoneName: Plane
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 3
+  animationType: 1
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
