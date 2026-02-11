@@ -18,6 +18,6 @@ MonoBehaviour:
   rotationSpeed: 10
   echoForce: 50
   pingCooldown: 2
-  currentAmmo: 1
+  currentAmmo: 3
   maxAmmo: 3
-  reloadTime: 5
+  reloadTime: 2
