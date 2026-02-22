@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13966, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: BaseLighting
+  m_Name: FirstPerson
   m_EditorClassIdentifier: UnityEditor.dll::UnityEditor.SceneTemplate.SceneTemplateAsset
   templateScene: {fileID: 102900000, guid: aa93164a134f5484aa0ad097e9168ab6, type: 3}
   templateName: 
@@ -49,9 +49,9 @@ MonoBehaviour:
     instantiationMode: 0
   - dependency: {fileID: 2800000, guid: fb6e06c953f0d8045bc58e0f5a640f07, type: 3}
     instantiationMode: 0
-  - dependency: {fileID: 8345070699079395523, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
-    instantiationMode: 0
   - dependency: {fileID: 919132149155446097, guid: fde0dabf2fc35794ea1eb4176d9ee46c, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 8345070699079395523, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
     instantiationMode: 0
   - dependency: {fileID: 2100000, guid: 60c2f0e0aaa8f8d4e9d23d7e3768653b, type: 2}
     instantiationMode: 0
@@ -123,8 +123,6 @@ MonoBehaviour:
     instantiationMode: 0
   - dependency: {fileID: 11400000, guid: beb8e357b61332141b55e69963cf4f96, type: 2}
     instantiationMode: 0
-  - dependency: {fileID: 2800000, guid: 5f2a108eb023faf43a809979fd3d38f2, type: 3}
-    instantiationMode: 1
   - dependency: {fileID: 7561066613761435406, guid: 50a0925b0c22af146a2d15615f815a1c, type: 3}
     instantiationMode: 0
   - dependency: {fileID: 2100000, guid: d5c0dc78f40c06c4e9356a3218da955b, type: 2}
@@ -132,8 +130,6 @@ MonoBehaviour:
   - dependency: {fileID: 2800000, guid: 3a5a871d579c2da4094f823d674595eb, type: 3}
     instantiationMode: 0
   - dependency: {fileID: 1335415992372505392, guid: 466621a4836aa504c87c15d88722d465, type: 3}
-    instantiationMode: 0
-  - dependency: {fileID: 4890085278179872738, guid: 33160dd0ee5f9a94baae5467c1c1411b, type: 2}
     instantiationMode: 0
   templatePipeline: {fileID: 0}
   badge: {fileID: 0}
