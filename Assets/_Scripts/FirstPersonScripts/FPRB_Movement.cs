@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class FPRB_Movement : MonoBehaviour
 {
@@ -41,6 +42,9 @@ public class FPRB_Movement : MonoBehaviour
     [Header("Ping Stats")]
     public float echoForce = 100f;
     public float pingCooldown = 1f;
+    public float shootPingCooldown = 2f;
+    public float pingMaxRange = 5f;
+    public float pingDuration = 1f;
     // public float currentAmmo = 3f;
     // public float maxAmmo = 3f;
     // public float reloadTime = 3f;
@@ -146,6 +150,7 @@ public class FPRB_Movement : MonoBehaviour
     private void HandlePing(InputAction.CallbackContext ctx)
     {
         if (ctx.performed && canPing) {
+            canPing = false;
             Ping();
         }
     }
@@ -153,7 +158,9 @@ public class FPRB_Movement : MonoBehaviour
     private void HandleShootPing(InputAction.CallbackContext ctx)
     {
         if (ctx.performed && canShootPing) {
+            canShootPing = false;
             ShootPing();
+            Invoke(nameof(ResetShootPing), shootPingCooldown);
         }
     }
 
@@ -292,9 +299,40 @@ public class FPRB_Movement : MonoBehaviour
         Rigidbody echoRb = echoInstance.GetComponent<Rigidbody>();
         echoRb.AddForce(shootingPoint.forward * echoForce, ForceMode.Impulse); 
     } 
+    private void ResetShootPing()
+    {
+        canShootPing = true;
+    }
 
     private void Ping()
     {
-        //pingEvent.Raise();
+        StartCoroutine(OverlapPing());
     }
+    private void ResetPing()
+    {
+        StopAllCoroutines();
+        canPing = true;
+    }
+
+    IEnumerator OverlapPing()
+    {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, pingMaxRange, LayerMask.GetMask("Invisible", "Revealed"));
+        foreach (Collider c in colliders)
+        {
+            if (c.gameObject.layer == LayerMask.NameToLayer("Invisible"))
+            {
+                c.gameObject.layer = LayerMask.NameToLayer("Revealed");
+            }
+        }
+        yield return new WaitForSeconds(pingDuration);
+        foreach (Collider c in colliders)
+        {
+            if (c.gameObject.layer == LayerMask.NameToLayer("Revealed"))
+            {
+                c.gameObject.layer = LayerMask.NameToLayer("Invisible");
+            }
+        }
+        ResetPing();
+    }
+
 }
