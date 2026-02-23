@@ -714,7 +714,7 @@ MonoBehaviour:
   animator: {fileID: 7510632729232824333}
   footstepSound: {fileID: 2850082966392929015}
   pingEvent: {fileID: 11400000, guid: 0867124af6a5b844aa73d9b95cdb3050, type: 2}
-  shootingPoint: {fileID: 0}
+  shootingPoint: {fileID: 7865062952324702456}
   echoSignalPrefab: {fileID: 7610974135745470925, guid: a188b0c4852aaf0418b173dbe1f45fbd, type: 3}
   playerStats: {fileID: 11400000, guid: 33b5b8db2f6e3e84a96ab0994d6a1891, type: 2}
   footstepInterval: 0.5
