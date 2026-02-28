@@ -1,6 +1,10 @@
 {
     "version": 1,
+<<<<<<<< HEAD:Assets/InputSystem_Actions.inputactions
+    "name": "InputSystem_Actions",
+========
     "name": "PlayerInput",
+>>>>>>>> pixelizing-and-palettizing:Assets/PlayerInput.inputactions
     "maps": [
         {
             "name": "Player",
@@ -28,7 +32,7 @@
                     "name": "Attack",
                     "type": "Button",
                     "id": "6c2ab1b8-8984-453a-af3d-a3c78ae1679a",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -73,16 +77,16 @@
                     "name": "Next",
                     "type": "Button",
                     "id": "b7230bb6-fc9b-4f52-8b25-f5e19cb2c2ba",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Run",
+                    "name": "Sprint",
                     "type": "Button",
                     "id": "641cd816-40e6-41b4-8c3d-04687c349290",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -91,15 +95,6 @@
                     "name": "CrouchToggle",
                     "type": "Button",
                     "id": "9ea4c470-fd61-46f5-8a0b-e1a1e7b88d8c",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Ping",
-                    "type": "Button",
-                    "id": "6166663d-4342-42eb-905b-fec3e6183516",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -256,7 +251,7 @@
                     "path": "<Pointer>/delta",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Keyboard&Mouse",
+                    "groups": ";Keyboard&Mouse;Touch",
                     "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -367,7 +362,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Run",
+                    "action": "Sprint",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -378,7 +373,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "Run",
+                    "action": "Sprint",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -388,8 +383,8 @@
                     "path": "<XRController>/trigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": "XR;Gamepad",
-                    "action": "Run",
+                    "groups": "XR",
+                    "action": "Sprint",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -500,28 +495,6 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "CrouchToggle",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "ac8ea3ac-8381-4eac-85c0-97fcde7ffd6d",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Ping",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "3771beaf-f592-4cf6-ae7b-a1e0bddb1b0e",
-                    "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Ping",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
