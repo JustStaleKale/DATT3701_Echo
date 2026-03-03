@@ -31,14 +31,6 @@ public class FPRB_Movement : MonoBehaviour
     public LayerMask groundLayer;
     private bool isGrounded;
 
-    [Header("References")]
-    public Rigidbody rb;
-    //public Transform orientation;
-    public PlayerInputs playerInput;
-    //public GameEvent pingEvent;
-    public Transform shootingPoint;
-    public GameObject echoSignalPrefab;
-
     [Header("Ping Stats")]
     public float echoForce = 100f;
     public float pingCooldown = 1f;
@@ -48,6 +40,17 @@ public class FPRB_Movement : MonoBehaviour
     // public float currentAmmo = 3f;
     // public float maxAmmo = 3f;
     // public float reloadTime = 3f;
+
+    [Header("References")]
+    public Rigidbody rb;
+    //public Transform orientation;
+    public PlayerInputs playerInput;
+    //public GameEvent pingEvent;
+    public Transform shootingPoint;
+    public GameObject echoSignalPrefab;
+    public Collider ambientPing;
+
+
 
     public enum MovementState { walking, running, crouching, air }
     public MovementState state;
@@ -333,6 +336,31 @@ public class FPRB_Movement : MonoBehaviour
             }
         }
         ResetPing();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        //Debug.Log("Triggered with " + other.gameObject.name);
+        if (other.gameObject.layer == LayerMask.NameToLayer("Invisible"))
+        {
+            other.gameObject.layer = LayerMask.NameToLayer("Revealed");
+        }
+    }
+    
+    private void OnTriggerExit(Collider other)
+    {
+        //Debug.Log("Exited trigger with " + other.gameObject.name);
+        if (other.gameObject.layer == LayerMask.NameToLayer("Revealed"))
+        {
+            other.gameObject.layer = LayerMask.NameToLayer("Invisible");
+        }
+    }
+
+    private void OnTriggerStay(Collider other) {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Invisible"))
+        {
+            other.gameObject.layer = LayerMask.NameToLayer("Revealed");
+        }
     }
 
 }
