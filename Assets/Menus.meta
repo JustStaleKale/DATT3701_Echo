@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Menus.meta
 guid: 9c1ff185b05046eaf82bb9584b945f85
+========
+guid: 834278159dd96e54c8829fd8af0211aa
+>>>>>>>> Stashed changes:Assets/Fonts.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

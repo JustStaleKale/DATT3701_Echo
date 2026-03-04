@@ -4,6 +4,8 @@ using System.Collections;
 
 public class FPRB_Movement : MonoBehaviour
 {
+    // ---------------------------------------------------------- Variables --------------------------------------------------------------------
+
     [Header("Movement Stats")]
     private float moveSpeed;
     public float walkSpeed = 2f;
@@ -18,7 +20,7 @@ public class FPRB_Movement : MonoBehaviour
 
     [Header("Crouching Stats")]
     public float crouchSpeed = 1f;
-    public float crouchYScale = 0.5f;
+    private float crouchYScale = 0.5f;
     private float startYScale;
 
     [Header("Slope Handling")]
@@ -32,11 +34,13 @@ public class FPRB_Movement : MonoBehaviour
     private bool isGrounded;
 
     [Header("Ping Stats")]
-    public float echoForce = 100f;
     public float pingCooldown = 1f;
-    public float shootPingCooldown = 2f;
     public float pingMaxRange = 5f;
     public float pingDuration = 1f;
+
+    [Header("Shoot Ping Stats")]
+    public float echoForce = 100f;
+    public float shootPingCooldown = 2f;
     // public float currentAmmo = 3f;
     // public float maxAmmo = 3f;
     // public float reloadTime = 3f;
@@ -49,19 +53,23 @@ public class FPRB_Movement : MonoBehaviour
     public Transform shootingPoint;
     public GameObject echoSignalPrefab;
     public Collider ambientPing;
-
-
+    public GameEvent pingEvent;
+    public GameEvent shootPingEvent;
+    public GameEvent playSoundEvent;
 
     public enum MovementState { walking, running, crouching, air }
     public MovementState state;
+
     private bool isCrouching = false;
     private bool isRunning = false;
     private bool canPing = true;
     private bool canShootPing = true;
     private Vector2 inputVector;
     private Vector3 moveDirection;
+    private bool isPaused = false;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    // ---------------------------------------------------------- Input Handling --------------------------------------------------------------------
     private void Awake()
     {
         //Initialize Components
@@ -103,12 +111,14 @@ public class FPRB_Movement : MonoBehaviour
     }
     private void OnMovementInput(InputAction.CallbackContext ctx)
     {
+        if (isPaused) return;
         inputVector = ctx.ReadValue<Vector2>();
         //moveDirection = new Vector3(inputVector.x, 0, inputVector.y);
     }
 
     private void OnCrouchToggleInput(InputAction.CallbackContext ctx)
     {
+        if (isPaused) return;
         if (ctx.performed) {
             isCrouching = !isCrouching;
             if (isCrouching)
@@ -124,6 +134,7 @@ public class FPRB_Movement : MonoBehaviour
 
     private void OnCrouchHoldInput(InputAction.CallbackContext ctx)
     {
+        if (isPaused) return;
         isCrouching = ctx.ReadValueAsButton();
         if (isCrouching)
         {
@@ -137,11 +148,13 @@ public class FPRB_Movement : MonoBehaviour
 
     private void OnSprintInput(InputAction.CallbackContext ctx)
     {
+        if (isPaused) return;
         isRunning = ctx.ReadValueAsButton();
     }
 
     private void OnJumpInput(InputAction.CallbackContext ctx)
     {
+        if (isPaused) return;
         if (ctx.performed && readyToJump && isGrounded) {
             readyToJump = false;
             Jump();
@@ -152,6 +165,7 @@ public class FPRB_Movement : MonoBehaviour
 
     private void HandlePing(InputAction.CallbackContext ctx)
     {
+        if (isPaused) return;
         if (ctx.performed && canPing) {
             canPing = false;
             Ping();
@@ -160,6 +174,7 @@ public class FPRB_Movement : MonoBehaviour
 
     private void HandleShootPing(InputAction.CallbackContext ctx)
     {
+        if (isPaused) return;
         if (ctx.performed && canShootPing) {
             canShootPing = false;
             ShootPing();
@@ -167,7 +182,7 @@ public class FPRB_Movement : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    // ---------------------------------------------------------- Updates and Fixed Updates --------------------------------------------------------------------
     void Update()
     {
         isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, groundLayer);
@@ -189,6 +204,7 @@ public class FPRB_Movement : MonoBehaviour
         MovePlayer();
     }
 
+    // ---------------------------------------------------------- Movement Mechanics --------------------------------------------------------------------
     private void StateHandler()
     {
         if (isGrounded &&isCrouching)
@@ -269,8 +285,11 @@ public class FPRB_Movement : MonoBehaviour
 
     private void CrouchOn()
     {
-        
+<<<<<<< Updated upstream
+        transform.localScale = new Vector3(transform.localScale.x, startYScale * crouchYScale, transform.localScale.z);
+=======
         transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
+>>>>>>> Stashed changes
         isCrouching = true;
         rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
     }
@@ -296,11 +315,14 @@ public class FPRB_Movement : MonoBehaviour
         return Vector3.ProjectOnPlane(moveDirection, slopeHit.normal).normalized;
     }
 
+    // ---------------------------------------------------------- Ping Mechanics --------------------------------------------------------------------
     private void ShootPing()
     {
         GameObject echoInstance = Instantiate(echoSignalPrefab, shootingPoint.position, Quaternion.identity);
         Rigidbody echoRb = echoInstance.GetComponent<Rigidbody>();
-        echoRb.AddForce(shootingPoint.forward * echoForce, ForceMode.Impulse); 
+        echoRb.AddForce(shootingPoint.forward * echoForce, ForceMode.Impulse);
+        shootPingEvent.Raise(this, null);
+        playSoundEvent.Raise(this, 2); 
     } 
     private void ResetShootPing()
     {
@@ -310,6 +332,8 @@ public class FPRB_Movement : MonoBehaviour
     private void Ping()
     {
         StartCoroutine(OverlapPing());
+        pingEvent.Raise(this, null);
+        playSoundEvent.Raise(this, 1); 
     }
     private void ResetPing()
     {
@@ -346,6 +370,13 @@ public class FPRB_Movement : MonoBehaviour
             other.gameObject.layer = LayerMask.NameToLayer("Revealed");
         }
     }
+
+    private void OnTriggerStay(Collider other) {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Invisible"))
+        {
+            other.gameObject.layer = LayerMask.NameToLayer("Revealed");
+        }
+    }
     
     private void OnTriggerExit(Collider other)
     {
@@ -356,11 +387,9 @@ public class FPRB_Movement : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay(Collider other) {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Invisible"))
-        {
-            other.gameObject.layer = LayerMask.NameToLayer("Revealed");
-        }
+    public void SetPause(Component sender, object data)
+    {
+        isPaused = (bool) data;
     }
 
 }
