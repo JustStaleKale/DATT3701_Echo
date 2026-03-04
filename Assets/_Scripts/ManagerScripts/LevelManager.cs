@@ -1,14 +1,14 @@
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
     //public GameEvent setScene;
     public Canvas loadCanvas;
-    public Image fillBar;
+    public GameObject loaderPanel;
     //public Image panelImage;
     private string sceneName;
     //private bool isLevel2Complete = false;
@@ -40,7 +40,8 @@ public class LevelManager : MonoBehaviour
         do
         {
             await Task.Delay(100);
-            fillBar.fillAmount = scene.progress / 0.9f;
+            loaderPanel.GetComponent<Image>().tintColor = new Color(0f, 0f, 0f, scene.progress / 0.9f);
+
         }while (scene.progress < 0.9f);
 
         scene.allowSceneActivation = true;
@@ -59,7 +60,7 @@ public class LevelManager : MonoBehaviour
         do
         {
             await Task.Delay(100);
-            fillBar.fillAmount = scene.progress / 0.9f;
+            loaderPanel.GetComponent<Image>().tintColor = new Color(0f, 0f, 0f, scene.progress / 0.9f);
 
         }while (scene.progress < 0.9f);
 
@@ -76,22 +77,13 @@ public class LevelManager : MonoBehaviour
 
         if(sceneName == "MainMenu")
         {
-            LoadScene("TutorialLevel");
+            LoadScene("Tutorial");
 
         } else if (sceneName == "TutorialLevel")
         {
-            LoadScene("Level 1");
+            LoadScene("Level1");
 
         } 
-
-        if (sceneName == "Main Menu")
-        {
-            LoadScene("TutorialLevel");
-        }
-         else
-        {
-            LoadScene("Level 1");
-        }
     }
 
     public void QuitGame()

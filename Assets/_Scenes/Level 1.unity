@@ -5572,6 +5572,93 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 481974, guid: 914595d46f531e44f8b35cd1232a0750, type: 3}
   m_PrefabInstance: {fileID: 532393342}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &246521453
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4650893923774082833, guid: 1374fc1dd1b81eb46b03935dd160a695, type: 3}
+      propertyPath: m_Name
+      value: DialogueManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5959702929657419869, guid: 1374fc1dd1b81eb46b03935dd160a695, type: 3}
+      propertyPath: line1.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5959702929657419869, guid: 1374fc1dd1b81eb46b03935dd160a695, type: 3}
+      propertyPath: line2.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5959702929657419869, guid: 1374fc1dd1b81eb46b03935dd160a695, type: 3}
+      propertyPath: 'line1.Array.data[0]'
+      value: I may be a genius but it doesn't take one to figure this out. I'll give
+        you a hint, your sonar can damage batteries.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5959702929657419869, guid: 1374fc1dd1b81eb46b03935dd160a695, type: 3}
+      propertyPath: 'line1.Array.data[1]'
+      value: Congrats! That was quicker than expected. You seem to be getting the
+        hang of echolocation. But how about a moving target?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5959702929657419869, guid: 1374fc1dd1b81eb46b03935dd160a695, type: 3}
+      propertyPath: 'line2.Array.data[0]'
+      value: Congrats! That was quicker than expected. You seem to be getting the
+        hang of echolocation. But how about a moving target?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132528042980172380, guid: 1374fc1dd1b81eb46b03935dd160a695, type: 3}
+      propertyPath: gameEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: b530bff4218c521498c6b0a407f35eb4, type: 2}
+    - target: {fileID: 9212970741832586240, guid: 1374fc1dd1b81eb46b03935dd160a695, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -27.23721
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212970741832586240, guid: 1374fc1dd1b81eb46b03935dd160a695, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.35609
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212970741832586240, guid: 1374fc1dd1b81eb46b03935dd160a695, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -11.55825
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212970741832586240, guid: 1374fc1dd1b81eb46b03935dd160a695, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212970741832586240, guid: 1374fc1dd1b81eb46b03935dd160a695, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212970741832586240, guid: 1374fc1dd1b81eb46b03935dd160a695, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212970741832586240, guid: 1374fc1dd1b81eb46b03935dd160a695, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212970741832586240, guid: 1374fc1dd1b81eb46b03935dd160a695, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212970741832586240, guid: 1374fc1dd1b81eb46b03935dd160a695, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212970741832586240, guid: 1374fc1dd1b81eb46b03935dd160a695, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3955251633656398166, guid: 1374fc1dd1b81eb46b03935dd160a695, type: 3}
+    - {fileID: 4129460061733183995, guid: 1374fc1dd1b81eb46b03935dd160a695, type: 3}
+    - {fileID: 4470373453452683437, guid: 1374fc1dd1b81eb46b03935dd160a695, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1374fc1dd1b81eb46b03935dd160a695, type: 3}
 --- !u!1001 &247562207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42185,7 +42272,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 498280, guid: 8c10b28a5dc86904db537e28568805a9, type: 3}
   m_PrefabInstance: {fileID: 555630083}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1 &171990658681886308
+=======
+--- !u!1 &207177978208210806
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42193,21 +42284,57 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream
   - component: {fileID: 8964532843731034564}
   m_Layer: 0
   m_Name: FP_ShootingPoint
   m_TagString: Untagged
+=======
+  - component: {fileID: 4797337354843738848}
+  - component: {fileID: 837218221227638155}
+  - component: {fileID: 2558468150105412352}
+  - component: {fileID: 9146594584821678939}
+  - component: {fileID: 7918354371305562895}
+  - component: {fileID: 6551683571876297370}
+  - component: {fileID: 586030763126338632}
+  m_Layer: 0
+  m_Name: FPRB_Player
+  m_TagString: Player
+>>>>>>> Stashed changes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
 --- !u!20 &258319077206303363
+=======
+--- !u!114 &333776357719086778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7108986489131693347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 320a91cba5171dd44addf182d26f0b58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FP_PlayerCam
+  sensX: 25
+  sensY: 25
+  orientation: {fileID: 4797337354843738848}
+--- !u!20 &439063013899999737
+>>>>>>> Stashed changes
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 2285843702189276632}
+=======
+  m_GameObject: {fileID: 7108986489131693347}
+>>>>>>> Stashed changes
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -42252,12 +42379,18 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+<<<<<<< Updated upstream
 --- !u!114 &870405970284052302
 MonoBehaviour:
+=======
+--- !u!135 &586030763126338632
+SphereCollider:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 2053703194496782236}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -42384,12 +42517,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: Cinemachine::Cinemachine.CinemachineHardLockToTarget
   m_Damping: 0
 --- !u!23 &3616520929412256196
+=======
+  m_GameObject: {fileID: 207177978208210806}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 2.25
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &837218221227638155
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207177978208210806}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &2558468150105412352
+>>>>>>> Stashed changes
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 2053703194496782236}
+=======
+  m_GameObject: {fileID: 207177978208210806}
+>>>>>>> Stashed changes
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -42408,7 +42571,11 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+<<<<<<< Updated upstream
   - {fileID: 2100000, guid: 59551041f57c90a4e9a3124a76e3ad5e, type: 2}
+=======
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+>>>>>>> Stashed changes
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -42432,13 +42599,154 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!114 &4513208871859098066
+=======
+--- !u!4 &3050901557913245284
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7747166233224447336}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3668952556306910953}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &3292620478277175358
+Transform:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4045195987870743799}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3668952556306910953}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &3668952556306910953
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7108986489131693347}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: -21.080269, y: 0.83, z: 8.917115}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3292620478277175358}
+  - {fileID: 3050901557913245284}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &3734299176216940273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7108986489131693347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Cinemachine::Cinemachine.CinemachineVirtualCamera
+  m_ExcludedPropertiesInInspector:
+  - m_Script
+  m_LockStageInInspector: 
+  m_StreamingVersion: 20170927
+  m_Priority: 10
+  m_StandbyUpdate: 2
+  m_LookAt: {fileID: 0}
+  m_Follow: {fileID: 6401904846671694553}
+  m_Lens:
+    FieldOfView: 60.000004
+    OrthographicSize: 5
+    NearClipPlane: 0.3
+    FarClipPlane: 1000
+    Dutch: 0
+    ModeOverride: 0
+    LensShift: {x: 0, y: 0}
+    GateFit: 2
+    FocusDistance: 10
+    m_SensorSize: {x: 1, y: 1}
+  m_Transitions:
+    m_BlendHint: 0
+    m_InheritPosition: 0
+    m_OnCameraLive:
+      m_PersistentCalls:
+        m_Calls: []
+  m_LegacyBlendHint: 0
+  m_ComponentOwner: {fileID: 3292620478277175358}
+--- !u!1 &4045195987870743799
+GameObject:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3292620478277175358}
+  - component: {fileID: 5240787682023749392}
+  - component: {fileID: 5334720859280861321}
+  - component: {fileID: 6483238819475492950}
+  m_Layer: 0
+  m_Name: cm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4797337354843738848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207177978208210806}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -21.080269, y: 0.58, z: 8.917115}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 6401904846671694553}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5240787682023749392
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 6442367424807863589}
+=======
+  m_GameObject: {fileID: 4045195987870743799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Cinemachine::Cinemachine.CinemachinePipeline
+--- !u!114 &5334720859280861321
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4045195987870743799}
+>>>>>>> Stashed changes
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
@@ -42449,24 +42757,7 @@ MonoBehaviour:
   m_AmplitudeGain: 0.7
   m_FrequencyGain: 0.59
   mNoiseOffsets: {x: 0, y: 0, z: 0}
---- !u!1 &4650893923800199548
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9212970741787396717}
-  - component: {fileID: 8132528043002297393}
-  - component: {fileID: 9212970741787396718}
-  m_Layer: 0
-  m_Name: DialogueManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
+<<<<<<< Updated upstream
 --- !u!114 &4747162429814437836
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -42480,6 +42771,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Cinemachine::Cinemachine.CinemachinePipeline
 --- !u!1 &4863588924306305765
+=======
+--- !u!1 &5819184635855095660
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42487,7 +42781,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream
   - component: {fileID: 8617669975822553713}
+=======
+  - component: {fileID: 6401904846671694553}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: CameraAnchor
   m_TagString: Untagged
@@ -42495,6 +42793,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
 --- !u!4 &5367396943517134638
 Transform:
   m_ObjectHideFlags: 0
@@ -42539,11 +42838,15 @@ Rigidbody:
   m_Constraints: 112
   m_CollisionDetection: 1
 --- !u!114 &6056362075426330168
+=======
+--- !u!114 &6124759477617043317
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 2285843702189276632}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -42607,6 +42910,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2285843702189276632}
+=======
+  m_GameObject: {fileID: 7108986489131693347}
+>>>>>>> Stashed changes
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
@@ -42644,7 +42950,66 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+<<<<<<< Updated upstream
 --- !u!1 &6734301739217872900
+=======
+--- !u!4 &6401904846671694553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5819184635855095660}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4797337354843738848}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6483238819475492950
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4045195987870743799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36d1163fa822e8b418a0a603ec078d5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Cinemachine::Cinemachine.CinemachineHardLockToTarget
+  m_Damping: 0
+--- !u!54 &6551683571876297370
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207177978208210806}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 112
+  m_CollisionDetection: 1
+--- !u!1 &7108986489131693347
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42652,20 +43017,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream
   - component: {fileID: 8930357011407561756}
   m_Layer: 0
   m_Name: FP_SET
+=======
+  - component: {fileID: 3668952556306910953}
+  - component: {fileID: 3734299176216940273}
+  - component: {fileID: 333776357719086778}
+  - component: {fileID: 439063013899999737}
+  - component: {fileID: 6124759477617043317}
+  m_Layer: 0
+  m_Name: FP_Camera
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
 --- !u!81 &7263041682928314657
 AudioListener:
+=======
+--- !u!1 &7747166233224447336
+GameObject:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 2285843702189276632}
   m_Enabled: 1
 --- !u!33 &7531365693220654078
@@ -42677,13 +43058,66 @@ MeshFilter:
   m_GameObject: {fileID: 2053703194496782236}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!136 &7593764451402950349
+=======
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3050901557913245284}
+  m_Layer: 0
+  m_Name: FP_ShootingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &7918354371305562895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207177978208210806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e906d3f20d00e44a947346091b8329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FPRB_Movement
+  walkSpeed: 2
+  runSpeed: 4
+  groundDrag: 5
+  jumpForce: 5
+  jumpCooldown: 0.25
+  airMultiplier: 0.5
+  crouchSpeed: 1
+  crouchYScale: 0.5
+  maxSlopeAngle: 45
+  playerHeight: 2
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 449
+  echoForce: 100
+  pingCooldown: 1
+  shootPingCooldown: 2
+  pingMaxRange: 5
+  pingDuration: 1
+  rb: {fileID: 6551683571876297370}
+  shootingPoint: {fileID: 3050901557913245284}
+  echoSignalPrefab: {fileID: 7610974135745470925, guid: a188b0c4852aaf0418b173dbe1f45fbd, type: 3}
+  ambientPing: {fileID: 586030763126338632}
+  state: 0
+--- !u!136 &9146594584821678939
+>>>>>>> Stashed changes
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 2053703194496782236}
   m_Material: {fileID: 13400000, guid: 9c4c1d1d4f1022045bb933b037c70969, type: 2}
+=======
+  m_GameObject: {fileID: 207177978208210806}
+  m_Material: {fileID: 13400000, guid: d7588c588b984fd478679bb84f17a320, type: 2}
+>>>>>>> Stashed changes
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -42699,6 +43133,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!135 &7788222568232679670
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -42720,34 +43155,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 2.25
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8132528043002297393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4650893923800199548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39a0975beb824f8499b799ad9f98dc5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
-  gameEvent: {fileID: 11400000, guid: b530bff4218c521498c6b0a407f35eb4, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 9212970741787396718}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: FollowTutorial
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &8481442735703698628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42847,72 +43254,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2435280282967013629}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &9212970741787396717
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4650893923800199548}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.23721, y: 1.35609, z: -11.55825}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9212970741787396718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4650893923800199548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f29cfa35265f3054b8bfdfad17cc67dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
-  line1:
-  - I may be a genius but it doesn't take one to figure this out. I'll give you a
-    hint, your sonar can damage batteries.
-  line2:
-  - Congrats! That was quicker than expected. You seem to be getting the hang of
-    echolocation. But how about a moving target?
-  line3:
-  - 'Now if I remember this place correctly, there''s probably a few obstacles in
-    your way right about now. Now remember this carefully: we''re going to go UP
-    and UNDER. I repeat, UP and UNDER.'
-  - Press Space to Jump, and to nobody's surprise, press the CTRL or C key to crouch.
-    REMEMBER, UP and UNDER.
-  line4:
-  - Gosh I really hope you remmeber who I am by now because it would be really embarrassing
-    if you didn't. I mean, who just blindly follows a random voice in their head?
-    Although seeing how we're stuck together, I guess you don't have much of a choice.
-  - Anyways, listen up. I supercharged your sonar so you can see a lot further than
-    normal. Press the Left Mouse Button to shoot out a sonar ping. Try not to bounce
-    it off your face though, this baby can knock your socks off.
-  line5:
-  - Sigh... If only life were that easy. Although, I guess you wouldn't really know
-    being a robot and all. Life is all about experiences, both good and bad. When
-    we get out of here, promise me you'll find out what it means to live.
-  - Until then, I guess you can just follow my voice and do exactly as I say. I didn't
-    have time to include a voice module while I was busy putting you back together,
-    but I'll take your unending silence as a resounding 'Hell Yeah'
-  SetDialogue: {fileID: 11400000, guid: e2845b8996f008b4699806f9cba5dd0c, type: 2}
+=======
+>>>>>>> Stashed changes
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 98199608}
   - {fileID: 1256947514}
+<<<<<<< Updated upstream
   - {fileID: 796383266}
   - {fileID: 16159150}
   - {fileID: 8930357011407561756}
   - {fileID: 5367396943517134638}
   - {fileID: 2435280282967013629}
   - {fileID: 1400194887}
-  - {fileID: 9212970741787396717}
+  - {fileID: 246521453}
   - {fileID: 332885727}
   - {fileID: 90295241}
+=======
+  - {fileID: 449750800}
+  - {fileID: 796383266}
+  - {fileID: 16159150}
+  - {fileID: 4797337354843738848}
+  - {fileID: 3668952556306910953}
+>>>>>>> Stashed changes
