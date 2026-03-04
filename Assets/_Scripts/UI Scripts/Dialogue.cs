@@ -3,10 +3,6 @@ using System.Collections;
 using TMPro;
 using UnityEngine.InputSystem;
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 public class Dialogue : MonoBehaviour
 {
     public GameObject dialoguePanel;

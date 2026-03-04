@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/_Events/LoadScene.asset.meta
 guid: 0c591c0d612aa88469e9107ac877ea2d
+========
+guid: 5523d09931607334a9b97adbdb5b1dac
+>>>>>>>> Stashed changes:Assets/Fonts/TickingTimebombBB SDF.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000

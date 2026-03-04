@@ -74,12 +74,8 @@ public class LevelManager : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
         sceneName = currentScene.name;
-        
-<<<<<<< Updated upstream
-        if(sceneName == "Main Menu")
-=======
+
         if(sceneName == "MainMenu")
->>>>>>> Stashed changes
         {
             LoadScene("Tutorial");
 
@@ -90,7 +86,6 @@ public class LevelManager : MonoBehaviour
         } 
     }
 
-<<<<<<< Updated upstream
     public void QuitGame()
     {
         Application.Quit();
@@ -107,8 +102,7 @@ public class LevelManager : MonoBehaviour
          
     // }
 
-=======
->>>>>>> Stashed changes
+
     public void RestartScene(Component sender, object data)
     {
         Scene currentScene = SceneManager.GetActiveScene();

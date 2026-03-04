@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/_Events/NextScene.asset.meta
 guid: 66e9cded6f522b54b8d0fe1741563180
+========
+guid: e2845b8996f008b4699806f9cba5dd0c
+>>>>>>>> Stashed changes:Assets/_Events/DialogueEvent.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000
