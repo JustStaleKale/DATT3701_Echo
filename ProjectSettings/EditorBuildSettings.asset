@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+<<<<<<< Updated upstream
     path: Assets/_Scenes/Main Menu.unity
     guid: f9ba6670585b58487bd3704ea6429e45
   - enabled: 1
+=======
+>>>>>>> Stashed changes
     path: Assets/_Scenes/TutorialLevel.unity
     guid: 1a1b194eae416c8418bff183d2306e3a
   - enabled: 1

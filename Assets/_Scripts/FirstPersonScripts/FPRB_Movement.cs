@@ -285,7 +285,11 @@ public class FPRB_Movement : MonoBehaviour
 
     private void CrouchOn()
     {
+<<<<<<< Updated upstream
         transform.localScale = new Vector3(transform.localScale.x, startYScale * crouchYScale, transform.localScale.z);
+=======
+        transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
+>>>>>>> Stashed changes
         isCrouching = true;
         rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
     }

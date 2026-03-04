@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/_Prefabs/Player Prefab.meta
 guid: 94de0d37ec1ed9649b5611ca0dbb6aad
+========
+guid: 1595d5e3b50720d43b9704f163440d7b
+>>>>>>>> Stashed changes:Assets/_Scenes/TutorialLevel.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

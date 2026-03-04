@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/_Prefabs/Manager Prefabs.meta
 guid: 1cc491fd589c92347a4b8d7e69975862
+========
+guid: c7cbedb64ad63d645bb479a8de7c745a
+>>>>>>>> Stashed changes:Assets/UI Icons/Source.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
