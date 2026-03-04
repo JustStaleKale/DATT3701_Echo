@@ -5,10 +5,7 @@ using UnityEngine.InputSystem;
 public class UIFillBar : MonoBehaviour
 {
     public Image fillImage;
-
-    public AudioSource audioSource;
-    public AudioClip pingClip;
-    public PlayerStats playerStats;
+    public float pingCooldown = 2f;
 
     private float chargeSpeed = 0.25f;
     private float cost = 1f;
@@ -18,7 +15,7 @@ public class UIFillBar : MonoBehaviour
 
     void Start()
     {
-        chargeSpeed = 1/playerStats.pingCooldown;
+        chargeSpeed = 1/pingCooldown;
     }
 
     void Update()
@@ -44,11 +41,6 @@ public class UIFillBar : MonoBehaviour
         currentCharge -= cost;
         currentCharge = Mathf.Clamp01(currentCharge);
         isRecharging = true;
-
-        if (pingClip != null)
-        {
-            audioSource.PlayOneShot(pingClip);
-        }
     }
 
     void RechargeBar()
