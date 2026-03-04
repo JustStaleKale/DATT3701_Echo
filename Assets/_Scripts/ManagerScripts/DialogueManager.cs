@@ -1,10 +1,8 @@
 using UnityEngine;
-using UnityEngine.UIElements;
 
-public class TutorialManager : MonoBehaviour
+public class DialogueManager : MonoBehaviour
 {
-    //Start
-    public string[] line1 = {
+   public string[] line1 = {
         "You're finally awake. I almost lost all hope. Don't worry if you can't see, your visual processor was damaged so I had to be a little creative when putting you back together.", 
         "I jerry rigged a state of the art sonar to your vision. You should be able to see using echolocation. Press the Right Mouse Button to see your surroundings. Press E to get try it out now!"
     };
@@ -53,24 +51,11 @@ public class TutorialManager : MonoBehaviour
         {
             SetDialogue.Raise(this, line1);
             index++;
-        } else if (index == 1 && sender.gameObject.tag.Equals("Player") )
+        } else if (index == 1 && sender.gameObject.name.Equals("Trigger1") )
         {
             SetDialogue.Raise(this, line2);
-            index++;
-        } else if (index == 2 && sender.gameObject.name.Equals("Trigger1") )
-        {
-            SetDialogue.Raise(this, line3);
-            index++;
-
-        } else if (index == 3 && sender.gameObject.name.Equals("Trigger2") )
-        {
-            SetDialogue.Raise(this, line4);
-            index++;
-
-        } else if (index == 4 && sender.gameObject.name.Equals("Trigger3") )
-        {
-            SetDialogue.Raise(this, line5);
             index++;
         }
     }
 }
+

@@ -274,7 +274,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1974404629}
+      - m_Target: {fileID: 3476359365342236133}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -407,7 +407,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1974404629}
+      - m_Target: {fileID: 3476359365342236133}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
         m_MethodName: NextScene
         m_Mode: 1
@@ -418,7 +418,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &646949959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -977,6 +977,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2812624570126788748, guid: c6a1606955573b846ade5e5d870f1dc9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4476868704333533512, guid: c6a1606955573b846ade5e5d870f1dc9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.37233
@@ -1022,17 +1026,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6a1606955573b846ade5e5d870f1dc9, type: 3}
---- !u!114 &1974404629 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3476359366762597361, guid: c6a1606955573b846ade5e5d870f1dc9, type: 3}
-  m_PrefabInstance: {fileID: 1974404628}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a82d812aeca5f744a897cdc3f54b959a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LevelManager
 --- !u!1 &2012240173
 GameObject:
   m_ObjectHideFlags: 0
@@ -1249,6 +1242,17 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &3476359365342236133 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3476359366762597361, guid: c6a1606955573b846ade5e5d870f1dc9, type: 3}
+  m_PrefabInstance: {fileID: 1974404628}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a82d812aeca5f744a897cdc3f54b959a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelManager
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
