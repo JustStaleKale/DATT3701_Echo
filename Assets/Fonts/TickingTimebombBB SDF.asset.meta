@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Fonts/TickingTimebombBB SDF.asset.meta
 guid: 5523d09931607334a9b97adbdb5b1dac
+========
+guid: e2845b8996f008b4699806f9cba5dd0c
+>>>>>>>> Stashed changes:Assets/_Events/DialogueEvent.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000

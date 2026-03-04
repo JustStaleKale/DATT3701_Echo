@@ -2,8 +2,11 @@
   <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Bezi.Editor.csproj" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   <Project Path="Assembly-CSharp-Editor.csproj" />
 =======
+=======
+>>>>>>> Stashed changes
   <Project Path="Unity.InputSystem.DocCodeSamples.csproj" />
   <Project Path="Unity.VisualScripting.DocCodeExamples.csproj" />
   <Project Path="Unity.PlasticSCM.Editor.Entities.csproj" />

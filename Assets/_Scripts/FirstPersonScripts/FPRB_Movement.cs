@@ -20,7 +20,7 @@ public class FPRB_Movement : MonoBehaviour
 
     [Header("Crouching Stats")]
     public float crouchSpeed = 1f;
-    public float crouchYScale = 0.5f;
+    private float crouchYScale = 0.5f;
     private float startYScale;
 
     [Header("Slope Handling")]
@@ -285,7 +285,7 @@ public class FPRB_Movement : MonoBehaviour
 
     private void CrouchOn()
     {
-        transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
+        transform.localScale = new Vector3(transform.localScale.x, startYScale * crouchYScale, transform.localScale.z);
         isCrouching = true;
         rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
     }

@@ -75,7 +75,7 @@ public class LevelManager : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         sceneName = currentScene.name;
         
-        if(sceneName == "MainMenu")
+        if(sceneName == "Main Menu")
         {
             LoadScene("Tutorial");
 
@@ -85,6 +85,22 @@ public class LevelManager : MonoBehaviour
 
         } 
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #endif
+    }
+
+    // public void EditorNextScene(Component sender, object data)
+    // {
+    //     EditorSceneManager.SaveOpenScenes();
+    //     EditorSceneManager.OpenScene((string) data, OpenSceneMode.Single);
+         
+    // }
 
     public void RestartScene(Component sender, object data)
     {

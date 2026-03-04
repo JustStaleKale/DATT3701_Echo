@@ -1,8 +1,16 @@
 fileFormatVersion: 2
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 guid: 8a89455d9345f510599536a6975b7f25
 =======
 guid: 834278159dd96e54c8829fd8af0211aa
+>>>>>>> Stashed changes
+=======
+<<<<<<<< Updated upstream:Assets/Menus.meta
+guid: 9c1ff185b05046eaf82bb9584b945f85
+========
+guid: 834278159dd96e54c8829fd8af0211aa
+>>>>>>>> Stashed changes:Assets/Fonts.meta
 >>>>>>> Stashed changes
 folderAsset: yes
 DefaultImporter:
