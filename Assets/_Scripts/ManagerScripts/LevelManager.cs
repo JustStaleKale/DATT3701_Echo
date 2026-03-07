@@ -8,7 +8,7 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Instance;
     //public GameEvent setScene;
     public Canvas loadCanvas;
-    public GameObject loaderPanel;
+    public GameObject slider;
     //public Image panelImage;
     private string sceneName;
     //private bool isLevel2Complete = false;
@@ -40,7 +40,7 @@ public class LevelManager : MonoBehaviour
         do
         {
             await Task.Delay(100);
-            loaderPanel.GetComponent<Image>().tintColor = new Color(0f, 0f, 0f, scene.progress / 0.9f);
+            slider.GetComponent<Slider>().value = scene.progress / 0.9f;
 
         }while (scene.progress < 0.9f);
 
@@ -52,22 +52,23 @@ public class LevelManager : MonoBehaviour
 
     public async void LoadScene(Component sender, object data)
     {
-        var scene = SceneManager.LoadSceneAsync((string) data);
-        scene.allowSceneActivation = false;
+        // var scene = SceneManager.LoadSceneAsync((string) data);
+        // scene.allowSceneActivation = false;
         
-        loadCanvas.enabled = true;
+        // loadCanvas.enabled = true;
 
-        do
-        {
-            await Task.Delay(100);
-            loaderPanel.GetComponent<Image>().tintColor = new Color(0f, 0f, 0f, scene.progress / 0.9f);
+        // do
+        // {
+        //     await Task.Delay(100);
+        //     loaderPanel.GetComponent<Image>().tintColor = new Color(0f, 0f, 0f, scene.progress / 0.9f);
 
-        }while (scene.progress < 0.9f);
+        // }while (scene.progress < 0.9f);
 
-        scene.allowSceneActivation = true;
-        await Task.Delay(1000);
-        loadCanvas.enabled = false;
-        //setScene.Raise(this, SceneManager.GetActiveScene().name);
+        // scene.allowSceneActivation = true;
+        // await Task.Delay(1000);
+        // loadCanvas.enabled = false;
+        // //setScene.Raise(this, SceneManager.GetActiveScene().name);
+        LoadScene((string) data);
     } 
 
     public void NextScene()
@@ -75,13 +76,13 @@ public class LevelManager : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         sceneName = currentScene.name;
 
-        if(sceneName == "MainMenu")
+        if(sceneName == "Main Menu")
         {
             LoadScene("Tutorial");
 
         } else if (sceneName == "TutorialLevel")
         {
-            LoadScene("Level1");
+            LoadScene("Level 1");
 
         } 
     }
