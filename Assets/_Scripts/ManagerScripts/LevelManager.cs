@@ -8,7 +8,7 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Instance;
     //public GameEvent setScene;
     public Canvas loadCanvas;
-    public Image fillBar;
+    public GameObject fillBar;
     //public Image panelImage;
     private string sceneName;
     //private bool isLevel2Complete = false;
@@ -40,7 +40,7 @@ public class LevelManager : MonoBehaviour
         do
         {
             await Task.Delay(100);
-            fillBar.fillAmount = scene.progress / 0.9f;
+            fillBar.GetComponent<Slider>().value = scene.progress / 0.9f;
         }while (scene.progress < 0.9f);
 
         scene.allowSceneActivation = true;
@@ -51,22 +51,7 @@ public class LevelManager : MonoBehaviour
 
     public async void LoadScene(Component sender, object data)
     {
-        var scene = SceneManager.LoadSceneAsync((string) data);
-        scene.allowSceneActivation = false;
-        
-        loadCanvas.enabled = true;
-
-        do
-        {
-            await Task.Delay(100);
-            fillBar.fillAmount = scene.progress / 0.9f;
-
-        }while (scene.progress < 0.9f);
-
-        scene.allowSceneActivation = true;
-        await Task.Delay(1000);
-        loadCanvas.enabled = false;
-        //setScene.Raise(this, SceneManager.GetActiveScene().name);
+        LoadScene((string) data);
     } 
 
     public void NextScene()

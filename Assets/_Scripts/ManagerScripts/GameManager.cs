@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
     private float time;
     private bool isRunning;
 
-    void Start()
+    void Awake()
     {
         time = 0;
         Time.timeScale = 1;

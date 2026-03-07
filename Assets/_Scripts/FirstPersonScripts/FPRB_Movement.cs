@@ -52,6 +52,7 @@ public class FPRB_Movement : MonoBehaviour
     //public GameEvent pingEvent;
     public Transform shootingPoint;
     public GameObject echoSignalPrefab;
+    public GameObject pingLight;
     public Collider ambientPing;
     public GameEvent pingEvent;
     public GameEvent shootPingEvent;
@@ -111,7 +112,7 @@ public class FPRB_Movement : MonoBehaviour
     }
     private void OnMovementInput(InputAction.CallbackContext ctx)
     {
-        if (isPaused) return;
+        //if (isPaused) return;
         inputVector = ctx.ReadValue<Vector2>();
         //moveDirection = new Vector3(inputVector.x, 0, inputVector.y);
     }
@@ -314,6 +315,7 @@ public class FPRB_Movement : MonoBehaviour
     // ---------------------------------------------------------- Ping Mechanics --------------------------------------------------------------------
     private void ShootPing()
     {
+        //ActivateLight();
         GameObject echoInstance = Instantiate(echoSignalPrefab, shootingPoint.position, Quaternion.identity);
         Rigidbody echoRb = echoInstance.GetComponent<Rigidbody>();
         echoRb.AddForce(shootingPoint.forward * echoForce, ForceMode.Impulse);
@@ -327,6 +329,7 @@ public class FPRB_Movement : MonoBehaviour
 
     private void Ping()
     {
+        //ActivateLight();
         StartCoroutine(OverlapPing());
         pingEvent.Raise(this, null);
         playSoundEvent.Raise(this, 1); 
@@ -339,6 +342,7 @@ public class FPRB_Movement : MonoBehaviour
 
     IEnumerator OverlapPing()
     {
+        GameObject light = Instantiate(pingLight, transform.position, Quaternion.identity);
         Collider[] colliders = Physics.OverlapSphere(transform.position, pingMaxRange, LayerMask.GetMask("Invisible", "Revealed"));
         foreach (Collider c in colliders)
         {
@@ -355,6 +359,7 @@ public class FPRB_Movement : MonoBehaviour
                 c.gameObject.layer = LayerMask.NameToLayer("Invisible");
             }
         }
+        Destroy(light);
         ResetPing();
     }
 
@@ -387,5 +392,19 @@ public class FPRB_Movement : MonoBehaviour
     {
         isPaused = (bool) data;
     }
+
+    // public void ActivateLight()
+    // {
+    //     //pingLight.GetComponent<Light>().enabled = true;
+    //     GameObject light = Instantiate(pingLight, transform.position, Quaternion.identity);
+    //     Invoke(nameof(DeactivateLight()), pingDuration);
+    // }
+
+    // public void DeactivateLight(GameObject light)
+    // {
+    //     //pingLight.GetComponent<Light>().enabled = false;
+    //     light.GetComponent<Light>().enabled = false;
+    //     Destroy(light);
+    // }
 
 }

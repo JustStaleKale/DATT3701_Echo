@@ -15,6 +15,7 @@ public class DoorSwitch : MonoBehaviour, IInteractable
     public void OpenDoor()
     {
         doorAnimator.SetBool("character_nearby", true);
+        interactMessage = "A door has opened!";
     }
 
     public string InteractMessage => interactMessage;
@@ -22,7 +23,6 @@ public class DoorSwitch : MonoBehaviour, IInteractable
     public void Interact()
     {
         OpenDoor();
-        interactMessage = string.Empty;
     }
 }
     

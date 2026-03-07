@@ -17,6 +17,7 @@ public class EchoSignal : MonoBehaviour
     private int bounces = 0;
 
     public float lifeTime = 3f;
+    private float delay = 0.05f;
 
     private List<Collider> revealedColliders;
 
@@ -33,18 +34,47 @@ public class EchoSignal : MonoBehaviour
         lifeTime -= Time.deltaTime;
         if (lifeTime <= 0)
         {
-            foreach (Collider c in revealedColliders)
-            {
-                if (c != null && c.gameObject.layer == LayerMask.NameToLayer("Revealed"))
-                {
-                    c.gameObject.layer = LayerMask.NameToLayer("Invisible");
-                }
-            }
-            revealedColliders.Clear();
-            Destroy(gameObject);
+            //StartCoroutine(RemovePing());
+            ImmediateRemoval();
         }
         lastVelocity = rb.linearVelocity;
     }
+
+    IEnumerator RemovePing()
+    {
+        var i = 0;
+        var maxI = revealedColliders.Count - 1;
+        while (i <= maxI)
+        {
+            if (revealedColliders[i] != null && revealedColliders[i].gameObject.layer == LayerMask.NameToLayer("Revealed"))
+            {
+                revealedColliders[i].gameObject.layer = LayerMask.NameToLayer("Invisible");
+            }
+            i++;
+            yield return new WaitForSeconds(duration / maxI);
+        }
+        DestroyPing();
+    }
+
+    private void DestroyPing()
+    {
+        revealedColliders.Clear();
+        StopAllCoroutines();
+        Destroy(gameObject);
+    }
+
+    private void ImmediateRemoval() {
+        foreach (Collider c in revealedColliders)
+        {
+            if (c != null && c.gameObject.layer == LayerMask.NameToLayer("Revealed"))
+            {
+                c.gameObject.layer = LayerMask.NameToLayer("Invisible");
+            }
+        }
+        DestroyPing();
+    }
+
+
 
     // private void OnCollisionEnter(Collision other) {
     //     // Ping(this, null);
