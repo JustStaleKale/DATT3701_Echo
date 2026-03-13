@@ -9,13 +9,19 @@ public class DialogueManagerNEW : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public Image portrait;
     public Image textbox;
+    public GameEvent pauseTime;
 
     private Dialogue dialogue;
     private int index;
 
+    private void Start()
+    {
+        index = 0;
+    }
 
     public void StartDialogue(Dialogue newDialogue)
     {
+        pauseTime.Raise(this, true);
         textbox.gameObject.SetActive(true);
         dialogue = newDialogue;
         index = 0;
@@ -57,6 +63,7 @@ public class DialogueManagerNEW : MonoBehaviour
 
     void EndDialogue()
     {
+        pauseTime.Raise(this, false);
         gameObject.SetActive(false);
     }
 
