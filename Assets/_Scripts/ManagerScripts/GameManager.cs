@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
         if(isRunning)
         {
             time += Time.deltaTime;
-            if(time > 2 && time < 3)
+            if(time > 1 && time < 2)
             {
                 //Time.timeScale = 0;
                 StartDialogue.Raise(this, dialogue);

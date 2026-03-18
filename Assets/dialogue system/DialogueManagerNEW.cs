@@ -68,12 +68,11 @@ public class DialogueManagerNEW : MonoBehaviour
 
     private void EndDialogue()
     {
-        // textbox.gameObject.SetActive(false);
-        // portrait.gameObject.SetActive(false);
-        // nameText.text = string.Empty;
-        // dialogueText.text = string.Empty;
+        textbox.gameObject.SetActive(false);
+        portrait.gameObject.SetActive(false);
+        nameText.text = string.Empty;
+        dialogueText.text = string.Empty;
         pauseTime.Raise(this, false);
-        gameObject.SetActive(false);
        
     }
 

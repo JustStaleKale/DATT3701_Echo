@@ -5,12 +5,12 @@ public class UI_WInState : MonoBehaviour
 {
 
     private bool win = false;
-    public float textDuration = 2f;
+    public float textDuration = 10f;
     public TextMeshProUGUI winText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Win(Component sender, object data)
     {
-        win = (bool) data;
+        win = true;
     }
 
     void Update()
@@ -23,7 +23,7 @@ public class UI_WInState : MonoBehaviour
         {
             winText.text = "";
             win = false;
-            textDuration = 2f;
+            textDuration = 10f;
         }
     }
 }
