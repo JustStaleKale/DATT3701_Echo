@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Dynamic;
 
 public class LevelManager : MonoBehaviour
 {
@@ -98,7 +99,10 @@ public class LevelManager : MonoBehaviour
         } else if (sceneName == "Third Scene")
         {
             await LoadScene("Level 1");
-        }
+        } else if (sceneName == "Level 1")
+        {
+            await LoadScene("Main Menu");
+        } 
 
         // if (sceneName == "Main Menu")
         // {
@@ -130,5 +134,11 @@ public class LevelManager : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
         await LoadScene(currentScene.name);
+    }
+
+    public void WinState(Component sender, object data)
+    {
+        //Debug.Log("Win State Reached");
+        Invoke(nameof(NextScene), 1f);
     }
 }

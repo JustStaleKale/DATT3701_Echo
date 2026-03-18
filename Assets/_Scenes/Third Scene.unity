@@ -9256,6 +9256,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 605442434408878096, guid: ea2e379b4022f0a4d958ceb34de4c7f1, type: 3}
+      propertyPath: m_Radius
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2442354646937239787, guid: ea2e379b4022f0a4d958ceb34de4c7f1, type: 3}
       propertyPath: echoForce
       value: 50

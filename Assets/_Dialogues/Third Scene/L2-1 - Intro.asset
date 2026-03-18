@@ -18,8 +18,8 @@ MonoBehaviour:
     text: '"Environmental noise is reaching critical levels."'
   - speakerName: Eden
     portrait: {fileID: 21300000, guid: 5771d178524caf74cb6b43cc70771940, type: 3}
-    text: "\"The Overseer... it\u2019s trying to format the air itself. It doesn't
-      want you to 'see' what\u2019s hidden here.\""
+    text: "\"The Overseer... it\u2019s completely shuffled this room like a maze
+      It doesn't want you to 'see' what\u2019s hidden here.\""
   - speakerName: Eden
     portrait: {fileID: 21300000, guid: 5771d178524caf74cb6b43cc70771940, type: 3}
     text: '"Activate all the batteries to open the final door and escape!"
