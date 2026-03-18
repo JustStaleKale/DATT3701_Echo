@@ -288,6 +288,7 @@ GameObject:
   - component: {fileID: 5654119844332713758}
   - component: {fileID: 2608780569890151255}
   - component: {fileID: 5223264978564502788}
+  - component: {fileID: 3188445823238336714}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -378,6 +379,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!225 &3188445823238336714
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3003600565434364403}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &3309028003491453855
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,7 +441,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
   loadCanvas: {fileID: 3003600565434364403}
-  panel: {fileID: 7575587171294969589}
   slider: {fileID: 403724351972912215}
 --- !u!114 &3837080210679038117
 MonoBehaviour:

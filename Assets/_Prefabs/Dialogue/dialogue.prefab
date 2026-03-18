@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a5e15d77fa14e2542b3c6e4ee86cc5b7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5f04ae1e146751f4db17aafd4da4630c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -131,6 +131,7 @@ MonoBehaviour:
   dialogueText: {fileID: 7615879716162468836}
   portrait: {fileID: 2307340765228502835}
   textbox: {fileID: 7616500308168803007}
+  pauseTime: {fileID: 11400000, guid: 5501219ad7c50e140a45831a779dcb6e, type: 2}
 --- !u!1 &6673288993749041460
 GameObject:
   m_ObjectHideFlags: 0

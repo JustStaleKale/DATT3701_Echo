@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ae33d88965f0614bb67e7be991c7566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  StartDialogue: {fileID: 11400000, guid: e2845b8996f008b4699806f9cba5dd0c, type: 2}
+  dialogue: {fileID: 11400000, guid: e0ff123532a266646b6efea01944742a, type: 2}
 --- !u!114 &4439756337690864275
 MonoBehaviour:
   m_ObjectHideFlags: 0

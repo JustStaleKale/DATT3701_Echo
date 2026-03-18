@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    //public GameEvent StartGame;
+    public GameEvent StartDialogue;
+    public Dialogue dialogue;
     private float time;
     private bool isRunning;
 
@@ -13,20 +14,21 @@ public class GameManager : MonoBehaviour
         isRunning = true;
     }
 
-    // void Update()
-    // {
-    //     if(isRunning)
-    //     {
-    //         time += Time.deltaTime;
-    //         if(time > 2 && time < 3)
-    //         {
-    //             //Time.timeScale = 0;
-    //             //StartGame.Raise(this, true);
-    //             time = 5;
-    //         }
-    //     }
+    void Update()
+    {
+        if(isRunning)
+        {
+            time += Time.deltaTime;
+            if(time > 2 && time < 3)
+            {
+                //Time.timeScale = 0;
+                StartDialogue.Raise(this, dialogue);
+                time = 5;
+                isRunning = false;
+            }
+        }
         
-    // }
+    }
 
     public void PauseGame (Component sender, object data)
     {

@@ -29,7 +29,12 @@ public class DialogueManagerNEW : MonoBehaviour
         ShowLine();
     }
 
-    void ShowLine()
+    public void StartDialogue(Component sender, object data)
+    {
+        StartDialogue((Dialogue) data);
+    }
+
+    private void ShowLine()
     {
         DialogueLine line = dialogue.lines[index];
 
@@ -61,15 +66,20 @@ public class DialogueManagerNEW : MonoBehaviour
         ShowLine();
     }
 
-    void EndDialogue()
+    private void EndDialogue()
     {
+        // textbox.gameObject.SetActive(false);
+        // portrait.gameObject.SetActive(false);
+        // nameText.text = string.Empty;
+        // dialogueText.text = string.Empty;
         pauseTime.Raise(this, false);
         gameObject.SetActive(false);
+       
     }
 
-    void Update()
+    private void Update()
     {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        if (Keyboard.current.eKey.wasPressedThisFrame)
         {
             NextLine();
         }
