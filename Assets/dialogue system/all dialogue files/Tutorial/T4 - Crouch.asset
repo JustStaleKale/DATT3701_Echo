@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0fb034029fb8544b8ae3ad75efa8f0f, type: 3}
+  m_Name: T4 - Crouch
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  lines:
+  - speakerName: Echo-09
+    portrait: {fileID: 21300000, guid: d5c0dd4781c7526498aab7fec666bd3a, type: 3}
+    text: "\"Surface scan complete. There\u2019s a breach at the base of the wall.
+      A gap, but it's too narrow for my current profile.\"\r\n"
+  - speakerName: Eden
+    portrait: {fileID: 21300000, guid: b2235fcbf5a3d7947a9d612207cb51f9, type: 3}
+    text: "\"That\u2019s your only exit. This room is a staging hopper for the incinerators
+      below. When the timer hits zero, the floor tilts, and everything in here becomes
+      fuel.\"\r\n"
+  - speakerName: Echo-09
+    portrait: {fileID: 21300000, guid: 52c34853bd203944d9626ed4e6ebd646, type: 3}
+    text: '"Understood. But the gap is too low. My chassis won''t clear it."
+
+      
+
+'
+  - speakerName: Eden
+    portrait: {fileID: 21300000, guid: b2235fcbf5a3d7947a9d612207cb51f9, type: 3}
+    text: '"Then stop standing. Lower your center of gravity, fold those servos and
+      crawl. Do it now, Echo-09, or you''re going into the fire with the rest of
+      the scrap."
+
+      
+
+'

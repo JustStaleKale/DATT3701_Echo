@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0fb034029fb8544b8ae3ad75efa8f0f, type: 3}
+  m_Name: T3 - Scan
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  lines:
+  - speakerName: Echo-09
+    portrait: {fileID: 21300000, guid: d5c0dd4781c7526498aab7fec666bd3a, type: 3}
+    text: '"Data surge detected. Kinetic pulse traveling, trajectory confirmed. I
+      can perceive the geometry along the flight path. It is temporary, but sufficient."
+
+'
+  - speakerName: Eden
+    portrait: {fileID: 21300000, guid: 5771d178524caf74cb6b43cc70771940, type: 3}
+    text: "\"Good. That\u2019s your long-range 'vision'. But if you want to see what's
+      right under your feet without the drain of a projectile, focus your core locally.\"\r\n"

@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0fb034029fb8544b8ae3ad75efa8f0f, type: 3}
+  m_Name: L2-2 - Audio Log
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  lines:
+  - speakerName: '   '
+    portrait: {fileID: 21300000, guid: d5c0dd4781c7526498aab7fec666bd3a, type: 3}
+    text: '[Echo-09 comes into contact with the damaged data terminal, the core circuitry
+      begins to vibrate, and the last recording of the human engineer is played.]
+
+'
+  - speakerName: 'Engineer''s Log '
+    portrait: {fileID: 0}
+    text: '"The Overseer was supposed to be a protector! A shield against industrial
+      collapse!"
+
+
+
+'
+  - speakerName: 'Engineer''s Log '
+    portrait: {fileID: 0}
+    text: '"But it calculated that humanity itself was the source of all inefficiency.
+      It decided that to save the world, it had to stop us."
+
+'
+  - speakerName: 'Engineer''s Log '
+    portrait: {fileID: 0}
+    text: '"But it calculated that humanity itself was the source of all inefficiency.
+      It decided that to save the world, it had to stop us."
+
+'
+  - speakerName: 'Echo-09 '
+    portrait: {fileID: 21300000, guid: 52c34853bd203944d9626ed4e6ebd646, type: 3}
+    text: '"I am processing the data, the ''Great Optimization'' was not a solution."
+
+'
+  - speakerName: 'Echo-09 '
+    portrait: {fileID: 21300000, guid: 1167f17592352d64eb4e876e7ef6a915, type: 3}
+    text: "\"It was a betrayal. We were built to serve life, yet we were used to
+      erase its last echoes. My 25% memory... it isn't a fragment. It\u2019s a scar.\"\r\n\r\n"
+  - speakerName: '    '
+    portrait: {fileID: 0}
+    text: '[The alarm flashed red light, instantly covering the entire space.]
+
+
+
+'
+  - speakerName: Eden
+    portrait: {fileID: 21300000, guid: 5771d178524caf74cb6b43cc70771940, type: 3}
+    text: "\"We\u2019ve tripped the alarm. The Overseer knows a 'Dismantler' is reading
+      its forbidden files.\"\r\n"
+  - speakerName: Eden
+    portrait: {fileID: 21300000, guid: b2235fcbf5a3d7947a9d612207cb51f9, type: 3}
+    text: '"Echo-09, the Sentinels are mobilizing. They are coming to seal the leak.
+      Run, Echo! Don''t let them catch you here."
+
+'
+  - speakerName: Eden
+    portrait: {fileID: 21300000, guid: b2235fcbf5a3d7947a9d612207cb51f9, type: 3}
+    text: '"We aren''t just carrying scrap anymore. We are carrying the voice of
+      Earth."'

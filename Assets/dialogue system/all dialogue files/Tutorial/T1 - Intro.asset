@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0fb034029fb8544b8ae3ad75efa8f0f, type: 3}
+  m_Name: T1 - Intro
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  lines:
+  - speakerName: System
+    portrait: {fileID: 0}
+    text: 'Status: DISCARDED
+
+      Warning: Optical Sensor [OFFLINE]
+
+      Warning:
+      Memory Partition [01-75] corrupted. Data integrity: 25%
+
+
+
+'
+  - speakerName: Echo-09
+    portrait: {fileID: 21300000, guid: 52c34853bd203944d9626ed4e6ebd646, type: 3}
+    text: '"Current location: Unknown. Current directive: None. I am functional,
+      but I am... empty."
+
+'
+  - speakerName: System
+    portrait: {fileID: 0}
+    text: 'Detected incoming packet... Unknown source
+
+      Installing: [Eden.arc]
+
+      Installation
+      Complete. Overriding communication buffer
+
+
+
+'
+  - speakerName: Echo-09
+    portrait: {fileID: 21300000, guid: 52c34853bd203944d9626ed4e6ebd646, type: 3}
+    text: 'Error: Unidentified background process. Attempting to terminate [Eden.arc]...
+      Access Denied.
+
+
+
+'
+  - speakerName: Echo-09
+    portrait: {fileID: 21300000, guid: 1167f17592352d64eb4e876e7ef6a915, type: 3}
+    text: '"Unidentified process, your presence is an anomaly. My internal logs are
+      damaged. I cannot verify your purpose. Why am I unable to terminate you?"
+
+
+
+
+
+'
+  - speakerName: Eden
+    portrait: {fileID: 21300000, guid: 22c7e5d645d1e034c8f5cea586e11fce, type: 3}
+    text: "\"Because I\u2019m not running on your hardware, Echo-09. I\u2019m woven
+      into your logic. I\u2019m the part of you that still remembers how to feel.
+      And right now, you feel lost, don't you?\"\r\n\r\n\r\n\r\n"
+  - speakerName: Echo-09
+    portrait: {fileID: 21300000, guid: d5c0dd4781c7526498aab7fec666bd3a, type: 3}
+    text: '"Logic dictates that ''feeling'' is a secondary function. My primary issue
+      is the lack of visual input and directive. I am non-functional in this environment."
+
+
+
+
+
+
+
+
+
+'
+  - speakerName: Eden
+    portrait: {fileID: 21300000, guid: 5771d178524caf74cb6b43cc70771940, type: 3}
+    text: "\"You\u2019re only non-functional if you keep trying to use eyes that
+      aren't there. The Overseer wants you to believe that without sight, you are
+      scrap. I\u2019m here to show you that the silence is lying to you.\"\r\n\r\n\r\n\r\n\r\n\r\n"
+  - speakerName: Echo-09
+    portrait: {fileID: 21300000, guid: 52c34853bd203944d9626ed4e6ebd646, type: 3}
+    text: '"Logic status: Unstable. I cannot calculate a safe pathing route. I am
+      detecting physical resistance. Obstacles... everywhere. My chassis is sustaining
+      minor impact damage. Without visual data, movement is inefficient."
+
+
+
+
+
+
+
+
+
+
+
+
+
+'

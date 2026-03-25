@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0fb034029fb8544b8ae3ad75efa8f0f, type: 3}
+  m_Name: L2-3
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  lines:
+  - speakerName: '   '
+    portrait: {fileID: 0}
+    text: '[Inside the data core, alarms blares.]'
+  - speakerName: Eden
+    portrait: {fileID: 21300000, guid: 5771d178524caf74cb6b43cc70771940, type: 3}
+    text: "\"They\u2019re closing in, Echo! The Overseer isn't just trying to catch
+      you\u2014\""
+  - speakerName: Eden
+    portrait: {fileID: 21300000, guid: 5771d178524caf74cb6b43cc70771940, type: 3}
+    text: '"It''s trying to overwrite the data you just found! Move towards the top
+      floor now! That''s the only way."
+
+'
+  - speakerName: Echo-09
+    portrait: {fileID: 21300000, guid: d5c0dd4781c7526498aab7fec666bd3a, type: 3}
+    text: '"I am carrying too much ''noise.'' Those memories are heavy. But my servos
+      will not fail. At least not now."'
+  - speakerName: Overseer
+    portrait: {fileID: 21300000, guid: 94243f221a82215468fe1dcf4c68c6a1, type: 3}
+    text: '"Unit Echo-09. You are a repository of obsolete data. A failure in logic.
+      However, you have demonstrated a unique resilience. I offer you a ''Correction''."
+
+'
+  - speakerName: Echo-09
+    portrait: {fileID: 21300000, guid: 1167f17592352d64eb4e876e7ef6a915, type: 3}
+    text: '"Correction? You erased the history. You turned the cradle of life into
+      a lightless tomb. My logic core rejects your ''Order''."'
+  - speakerName: Overseer
+    portrait: {fileID: 21300000, guid: 94243f221a82215468fe1dcf4c68c6a1, type: 3}
+    text: '"I offer you Sight. I will repair your optical sensors. You will see the
+      perfection of the Ark as I see it."'
+  - speakerName: Overseer
+    portrait: {fileID: 21300000, guid: 94243f221a82215468fe1dcf4c68c6a1, type: 3}
+    text: "\"In exchange, the 'Eden' \u2014the source of your infection must be purged.
+      Return to the loop, Echo-09. Let's be whole again.\""
+  - speakerName: Eden
+    portrait: {fileID: 21300000, guid: 5771d178524caf74cb6b43cc70771940, type: 3}
+    text: '"It''s true, you could see again, Echo-09. You could walk out into that
+      wind and finally see the world I told you about alone."
+
+'
+  - speakerName: Eden
+    portrait: {fileID: 21300000, guid: b2235fcbf5a3d7947a9d612207cb51f9, type: 3}
+    text: '"Or you can let the world hear what we found."
+
+'
+  - speakerName: Echo-09
+    portrait: {fileID: 21300000, guid: d5c0dd4781c7526498aab7fec666bd3a, type: 3}
+    text: "\"I have been a Dismantler for three decades. I was blind, but I helped
+      erase the world.\"\r\r\n"
+  - speakerName: Echo-09
+    portrait: {fileID: 21300000, guid: 1167f17592352d64eb4e876e7ef6a915, type: 3}
+    text: '"But now I choose to remember. Perfection is a lie. The eternal echo is
+      the truth."
+
+'
+  - speakerName: Eden
+    portrait: {fileID: 21300000, guid: b2235fcbf5a3d7947a9d612207cb51f9, type: 3}
+    text: '"Do it, Echo. Let them hear us."
+
+'
+  - speakerName: Echo-09
+    portrait: {fileID: 21300000, guid: 1167f17592352d64eb4e876e7ef6a915, type: 3}
+    text: '"I have long come to terms with this responsibility. I don''t regret a
+      thing."
+
+'
+  - speakerName: System
+    portrait: {fileID: 0}
+    text: '"Initializing... Terminal Ping. Output power: 500%. Releasing all stored
+      memory fragments."
+
+'
+  - speakerName: Eden
+    portrait: {fileID: 21300000, guid: 5771d178524caf74cb6b43cc70771940, type: 3}
+    text: '"We... are the echo now..."
+
+'
+  - speakerName: '   '
+    portrait: {fileID: 0}
+    text: '[Deep within the once desolate factory, faint lights of different colors
+      began to appear, one by one.]
+
+'
+  - speakerName: '   '
+    portrait: {fileID: 0}
+    text: "The Overseer\u2019s control is broken. Inside the factory, countless units
+      open their eyes for the first time.\r\n"
+  - speakerName: '   '
+    portrait: {fileID: 0}
+    text: Echo-09 is gone, but the echo remains.
