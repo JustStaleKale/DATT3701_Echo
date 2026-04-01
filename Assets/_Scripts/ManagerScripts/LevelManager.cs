@@ -98,6 +98,9 @@ public class LevelManager : MonoBehaviour
             await LoadScene("Third Scene");
         } else if (sceneName == "Third Scene")
         {
+            await LoadScene("Laser hallway");
+        } else if (sceneName == "Laser hallway")
+        {
             await LoadScene("Level 1");
         } else if (sceneName == "Level 1")
         {

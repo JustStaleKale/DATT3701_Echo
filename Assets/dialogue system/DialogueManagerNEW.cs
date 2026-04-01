@@ -13,10 +13,12 @@ public class DialogueManagerNEW : MonoBehaviour
 
     private Dialogue dialogue;
     private int index;
+    private bool isDialogueActive;
 
     private void Start()
     {
         index = 0;
+        isDialogueActive = false;
     }
 
     public void StartDialogue(Dialogue newDialogue)
@@ -25,6 +27,7 @@ public class DialogueManagerNEW : MonoBehaviour
         textbox.gameObject.SetActive(true);
         dialogue = newDialogue;
         index = 0;
+        isDialogueActive = true;
 
         ShowLine();
     }
@@ -73,12 +76,12 @@ public class DialogueManagerNEW : MonoBehaviour
         nameText.text = string.Empty;
         dialogueText.text = string.Empty;
         pauseTime.Raise(this, false);
-       
+        isDialogueActive = false;
     }
 
     private void Update()
     {
-        if (Keyboard.current.eKey.wasPressedThisFrame)
+        if (Keyboard.current.eKey.wasPressedThisFrame && isDialogueActive)
         {
             NextLine();
         }

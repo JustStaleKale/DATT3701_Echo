@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/_Scenes/Build Scenes/Third Scene.unity
     guid: e23c680d59f0a5f4d984cb4c62ab6257
   - enabled: 1
+    path: Assets/_Scenes/Build Scenes/Laser hallway.unity
+    guid: fc2f49a5bf533c943a2108dbc397cc1f
+  - enabled: 1
     path: Assets/_Scenes/Build Scenes/Level 1.unity
     guid: b0a779827a9848a4b8faac8d1a667d03
   m_configObjects:
