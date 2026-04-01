@@ -13695,7 +13695,7 @@ MonoBehaviour:
   triggerWin: {fileID: 11400000, guid: b530bff4218c521498c6b0a407f35eb4, type: 2}
   startGame: {fileID: 11400000, guid: 76c034dc0b363d541806d67cae8ce5cf, type: 2}
   StartDialogue: {fileID: 11400000, guid: e2845b8996f008b4699806f9cba5dd0c, type: 2}
-  failDialogue: {fileID: 11400000, guid: 66af428b172a7cb4f84db77e5f09f299, type: 2}
+  failDialogue: {fileID: 11400000, guid: 9656da5b2c2e19146bc111f053c85de4, type: 2}
   winDialogue: {fileID: 11400000, guid: 51cd63a645acb3d4d890a6be372c7dca, type: 2}
 --- !u!1001 &1484209144
 PrefabInstance:

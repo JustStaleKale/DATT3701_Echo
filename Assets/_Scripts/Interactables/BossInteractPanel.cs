@@ -21,9 +21,10 @@ public class BossInteractPanel : MonoBehaviour, IInteractable
             interactMessage = "You Win! The Overseer has been deactivated.";
         } else
         {
-            startGame.Raise(this, null);
+            //startGame.Raise(this, null);
+            triggerWin.Raise(this, null);
             StartDialogue.Raise(this, failDialogue);    
-            interactMessage = "You do not remember the code to deactivate the overseer.";
+            interactMessage = "You win, but at a cost. The Overseer has self-destructed.";
         }
     }
 

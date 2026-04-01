@@ -4,8 +4,8 @@ using TMPro;
 public class EndScript : MonoBehaviour
 {
     public GameObject blackScreen;
-    public GameObject goodEnding;
-    public GameObject badEnding;
+    //public GameObject goodEnding;
+    //public GameObject badEnding;
     public ItemCount itemCount;
     public TextMeshProUGUI endingText;
     public GameObject restartButton;
@@ -18,8 +18,7 @@ public class EndScript : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         blackScreen.SetActive(true);
-        goodEnding.SetActive(false);
-        badEnding.SetActive(false);
+        
         restartButton.SetActive(false);
         time = 0;
         if (itemCount.count >= 4)
@@ -37,14 +36,14 @@ public class EndScript : MonoBehaviour
         time += Time.deltaTime;
         if (time > duration)
         {
-            blackScreen.SetActive(false);
-            if (itemCount.count >= 4)
-            {
-                goodEnding.SetActive(true);
-            } else
-            {
-                badEnding.SetActive(true);
-            }
+            //blackScreen.SetActive(false);
+            ////if (itemCount.count >= 4)
+            ////{
+            ////    goodEnding.SetActive(true);
+            ////} else
+            ////{
+            ////    badEnding.SetActive(true);
+            ////}
             if (time > duration+2) {restartButton.SetActive(true);}
         }
     }
