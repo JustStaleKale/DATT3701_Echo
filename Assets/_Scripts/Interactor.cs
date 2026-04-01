@@ -14,7 +14,7 @@ public class Interactor : MonoBehaviour
     public float interactRange = 3f;
     public LayerMask interactableLayer;
     public TextMeshProUGUI interactionText;
-    public string defaultMessage = "Press 'E' to interact";
+    public string defaultMessage = "Press 'F' to interact";
     private IInteractable currentInteractable;
 
     private void Update()
@@ -44,7 +44,7 @@ public class Interactor : MonoBehaviour
 
     private void HandleInteraction()
     {
-        if (currentInteractable != null && Keyboard.current.eKey.wasPressedThisFrame)
+        if (currentInteractable != null && Keyboard.current.fKey.wasPressedThisFrame)
         {
             currentInteractable.Interact();
         }

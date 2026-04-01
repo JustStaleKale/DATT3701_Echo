@@ -15,8 +15,9 @@ MonoBehaviour:
   lines:
   - speakerName: '   '
     portrait: {fileID: 21300000, guid: d5c0dd4781c7526498aab7fec666bd3a, type: 3}
-    text: '[Echo-09 comes into contact with the damaged data terminal, the core circuitry
-      begins to vibrate, and the last recording of the human engineer is played.]
+    text: '"Gate cleared. But my core is spiking. My 25% map is struggling to overlay
+      with the reality of this room. I know the rhythm of the air here. I know the
+      smell of this dust."
 
 '
   - speakerName: 'Engineer''s Log '

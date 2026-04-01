@@ -15,7 +15,7 @@ MonoBehaviour:
   lines:
   - speakerName: Echo-09
     portrait: {fileID: 21300000, guid: 1c5e6c4aadb48f84e8c400d8b76d7687, type: 3}
-    text: '"Unkown object detected."'
+    text: '"Unknown object detected."'
   - speakerName: Eden
     portrait: {fileID: 21300000, guid: 5771d178524caf74cb6b43cc70771940, type: 3}
     text: '"This sensor has been broken for 50 years. Its processor is overheating,
@@ -34,5 +34,5 @@ MonoBehaviour:
       to a world that was once alive.\""
   - speakerName: Eden
     portrait: {fileID: 21300000, guid: b2235fcbf5a3d7947a9d612207cb51f9, type: 3}
-    text: '"Keep it. It may prove to be useful later. There may be more fragements
+    text: '"Keep it. It may prove to be useful later. There may be more fragments
       elsewhere too." '

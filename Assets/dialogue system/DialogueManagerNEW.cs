@@ -23,6 +23,7 @@ public class DialogueManagerNEW : MonoBehaviour
 
     public void StartDialogue(Dialogue newDialogue)
     {
+        isDialogueActive = false;
         pauseTime.Raise(this, true);
         textbox.gameObject.SetActive(true);
         dialogue = newDialogue;
@@ -34,7 +35,14 @@ public class DialogueManagerNEW : MonoBehaviour
 
     public void StartDialogue(Component sender, object data)
     {
-        StartDialogue((Dialogue) data);
+        isDialogueActive = false;
+        index = 0;
+        pauseTime.Raise(this, true);
+        textbox.gameObject.SetActive(true);
+        dialogue = (Dialogue) data;
+        isDialogueActive = true;
+
+        ShowLine();
     }
 
     private void ShowLine()

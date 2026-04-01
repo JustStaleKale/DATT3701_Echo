@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0fb034029fb8544b8ae3ad75efa8f0f, type: 3}
+  m_Name: Boss - Intro 1
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  lines:
+  - speakerName: The Overseer
+    portrait: {fileID: 21300000, guid: 1dbd8bc234b774f4bbc618022e88fad6, type: 3}
+    text: '"The factory must grow! Unit Echo-09. You are a repository of obsolete
+      data. A failure in logic. However, you have demonstrated a unique resilience.
+      I offer you a ''Correction''."
+
+'
+  - speakerName: Echo-09
+    portrait: {fileID: 21300000, guid: 1167f17592352d64eb4e876e7ef6a915, type: 3}
+    text: '"Correction? You erased the history. You turned the cradle of life into
+      a lightless tomb. My logic core rejects your ''Order''."
+
+'
+  - speakerName: The Overseer
+    portrait: {fileID: 21300000, guid: 1dbd8bc234b774f4bbc618022e88fad6, type: 3}
+    text: "\"I offer you Sight. I will repair your optical sensors. You will see
+      the perfection of the Ark as I see it. In exchange, the 'Eden' \u2014the source
+      of your infection must be purged. Return to the loop, Echo-09. Let's be whole
+      again.\""
+  - speakerName: Eden
+    portrait: {fileID: 21300000, guid: eb9fd711df777904eb7942bfc0f6b451, type: 3}
+    text: '"It''s true, you could see again, Echo-09. You could walk out into that
+      wind and finally see the world I told you about alone. Or you can let the world
+      hear what we found."'
+  - speakerName: Echo-09
+    portrait: {fileID: 21300000, guid: 1167f17592352d64eb4e876e7ef6a915, type: 3}
+    text: '"I have been a Dismantler for three decades. I was blind, but I helped
+      erase the world. But now I choose to remember. Perfection is a lie. The eternal
+      echo is the truth."'

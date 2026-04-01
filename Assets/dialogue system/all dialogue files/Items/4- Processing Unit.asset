@@ -10,20 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0fb034029fb8544b8ae3ad75efa8f0f, type: 3}
-  m_Name: 3 - Processing Unit
+  m_Name: 4- Processing Unit
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   lines:
   - speakerName: Echo-09
     portrait: {fileID: 21300000, guid: 9c55d837d0f21634c8fa19a47f648093, type: 3}
-    text: '"Unkown object detected."'
+    text: '"Unknown object detected."'
   - speakerName: Eden
     portrait: {fileID: 21300000, guid: 5771d178524caf74cb6b43cc70771940, type: 3}
-    text: ' "This processing unit is trying to connect to a network that no longer
-      exists."'
-  - speakerName: Eden
-    portrait: {fileID: 21300000, guid: 5771d178524caf74cb6b43cc70771940, type: 3}
-    text: "\"It\u2019s lonely, Echo. So it created tens of thousands of fake 'nodes'
-      just to have someone to talk to. It\u2019s dreaming of being in a crowd.\"\r\n"
+    text: " \"This processing unit is trying to connect to a network that no longer
+      exists. It\u2019s lonely, Echo. So it created tens of thousands of fake 'nodes'
+      just to have someone to talk to. It\u2019s dreaming of being in a crowd.\""
   - speakerName: Echo-09
     portrait: {fileID: 21300000, guid: 52c34853bd203944d9626ed4e6ebd646, type: 3}
     text: '"It is generating useless traffic. Total inefficiency. And yet, the chaotic

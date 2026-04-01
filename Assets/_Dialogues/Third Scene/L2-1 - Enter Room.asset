@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0fb034029fb8544b8ae3ad75efa8f0f, type: 3}
+  m_Name: L2-1 - Enter Room
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  lines:
+  - speakerName: Echo-09
+    portrait: {fileID: 21300000, guid: 52c34853bd203944d9626ed4e6ebd646, type: 3}
+    text: '"Gate cleared. But my core is spiking. My 25% map is struggling to overlay
+      with the reality of this room. I know the rhythm of the air here. I know the
+      smell of this dust."'
+  - speakerName: Eden
+    portrait: {fileID: 21300000, guid: 5771d178524caf74cb6b43cc70771940, type: 3}
+    text: '"Welcome back, Echo-09. Welcome to Sector 4. This was your cage for three
+      decades. You weren''t a worker nor traveler back then, but a ''Relic Dismantler.''
+      Those giant mechanical arms above you? They were your hands."'
+  - speakerName: Echo-09
+    portrait: {fileID: 21300000, guid: 1167f17592352d64eb4e876e7ef6a915, type: 3}
+    text: '"I can feel the phantom feedback in my servos. I remember the sound of
+      metal shearing. I wasn''t just recycling scrap, I was methodically erasing
+      history. Every object that entered this room left as an anonymous ingot."'
+  - speakerName: Eden
+    portrait: {fileID: 21300000, guid: 5771d178524caf74cb6b43cc70771940, type: 3}
+    text: "\"The Overseer told you those objects were 'inefficient data.' It turned
+      you into a ghost that haunts the history of humanity. But look toward the back\u2014your
+      old workstation. Something there caused your 'glitch.' Something you refused
+      to destroy.\"\n"
+  - speakerName: Echo-09
+    portrait: {fileID: 21300000, guid: 3a01f8957cca16948b115b58c1628d8f, type: 3}
+    text: '"A logic error that became a choice. I need to see what I saved. Let''s
+      move deeper into the station, Eden."'

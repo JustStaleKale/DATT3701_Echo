@@ -10,20 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0fb034029fb8544b8ae3ad75efa8f0f, type: 3}
-  m_Name: 2 - Optical Probe
+  m_Name: 3 - Optical Probe 1
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   lines:
   - speakerName: Echo-09
     portrait: {fileID: 21300000, guid: 12aff6dc2bed9cd4bbef1ae696175a28, type: 3}
-    text: '"Unknown object detected."'
+    text: '"Unknown object detected"'
   - speakerName: Eden
     portrait: {fileID: 21300000, guid: 5771d178524caf74cb6b43cc70771940, type: 3}
-    text: '"This optical probe stared into a smelting furnace for too long. The light
-      signal was seared into its circuits before it died."'
-  - speakerName: Eden
-    portrait: {fileID: 21300000, guid: 5771d178524caf74cb6b43cc70771940, type: 3}
-    text: "\"Now, it 'dreams' that the entire factory is covered in something called
-      'Gold.' It\u2019s dreaming of the daylight.\""
+    text: "\"This optical probe stared into a smelting furnace for too long. The
+      light signal was seared into its circuits before it died. Now, it 'dreams'
+      that the entire factory is covered in something called 'Gold.' It\u2019s dreaming
+      of the daylight.\""
   - speakerName: Echo-09
     portrait: {fileID: 21300000, guid: 52c34853bd203944d9626ed4e6ebd646, type: 3}
     text: '"''Gold'', the wavelength is not in my active dictionary. But I feel a

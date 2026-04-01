@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/Main Menu.unity
+    path: Assets/_Scenes/Build Scenes/Main Menu.unity
     guid: f9ba6670585b58487bd3704ea6429e45
   - enabled: 1
     path: Assets/_Scenes/Build Scenes/TutorialLevel.unity
@@ -23,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Build Scenes/Level 1.unity
     guid: b0a779827a9848a4b8faac8d1a667d03
+  - enabled: 1
+    path: Assets/_Scenes/Build Scenes/Final boss cutscene.unity
+    guid: 39845d30b5b6dc3448654000e17dfda3
+  - enabled: 1
+    path: Assets/_Scenes/Build Scenes/End Credits.unity
+    guid: 9483ca5bd54d5ee46848f448e3438ab8
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 58edd7891bddfa643971bd3e836e2e84, type: 3}
   m_UseUCBPForAssetBundles: 0

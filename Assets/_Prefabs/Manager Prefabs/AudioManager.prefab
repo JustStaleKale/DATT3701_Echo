@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5343825829195988336}
   - component: {fileID: 610802747476824592}
   - component: {fileID: 6174970125862953575}
+  - component: {fileID: 3052017530709482148}
   - component: {fileID: 3069600125575499421}
   m_Layer: 0
   m_Name: AudioManager
@@ -50,6 +51,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5dfbda2801fe1c541a9b8da869c1a411, type: 3}
   - {fileID: 8300000, guid: 81d29fd4c1e9b3442ab80c9c0621c041, type: 3}
   - {fileID: 8300000, guid: 2e952db55ead4fb41a2e12f5cd730c99, type: 3}
+  - {fileID: 8300000, guid: 448042127ac487147bca1c853c089539, type: 3}
+  - {fileID: 8300000, guid: 4a854f0fc2c5af14daa14b33efbcaf0a, type: 3}
+  - {fileID: 8300000, guid: 95b0c8f345b84a644ac4c23cf254f95d, type: 3}
+  - {fileID: 8300000, guid: e60925c6b7ab85b43a5870fd75d201ec, type: 3}
+  - {fileID: 8300000, guid: 5701982d1d6b2b545931a9a117729b9f, type: 3}
   bgm: {fileID: 3069600125575499421}
 --- !u!114 &6174970125862953575
 MonoBehaviour:
@@ -70,6 +76,34 @@ MonoBehaviour:
       - m_Target: {fileID: 610802747476824592}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: PlaySound
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3052017530709482148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3051188872377137044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a0975beb824f8499b799ad9f98dc5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 8246e2c5266b4f6409366c178fb9ae0c, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 610802747476824592}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: ChangeBGM
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

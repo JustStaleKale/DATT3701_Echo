@@ -10,7 +10,7 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(BGM());
+        StartCoroutine(BGM(0));
     }
     void Awake()
 	{
@@ -38,8 +38,12 @@ public class AudioManager : MonoBehaviour
     {
         AudioSource.PlayClipAtPoint(soundList[2], sender.transform.position);
     }
+    public void ChangeBGM(Component sender, object data)
+    {
+        StartCoroutine(BGM((int)data));
+    }
 
-    IEnumerator BGM()
+    IEnumerator BGM(int i)
     {
         // bgm.clip = soundList[4];
         // bgm.loop = false;
@@ -50,7 +54,7 @@ public class AudioManager : MonoBehaviour
         //     yield return null;
         // }
 
-        bgm.clip = soundList[0];
+        bgm.clip = soundList[i];
         bgm.loop = true;
         bgm.Play();
         while(bgm.isPlaying)

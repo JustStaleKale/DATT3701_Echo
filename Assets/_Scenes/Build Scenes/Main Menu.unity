@@ -1057,6 +1057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu_Start
   nextLevel: {fileID: 11400000, guid: 66e9cded6f522b54b8d0fe1741563180, type: 2}
   quitLevel: {fileID: 11400000, guid: a63af90bcb8e4db4c8ee35291a986e32, type: 2}
+  itemCount: {fileID: 11400000, guid: 9ae0aaeb8f04042419f259a85b2a2e87, type: 2}
 --- !u!1001 &1429167406
 PrefabInstance:
   m_ObjectHideFlags: 0

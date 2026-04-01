@@ -441,6 +441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
   loadCanvas: {fileID: 3003600565434364403}
+  changeBGM: {fileID: 11400000, guid: 8246e2c5266b4f6409366c178fb9ae0c, type: 2}
   slider: {fileID: 403724351972912215}
 --- !u!114 &3837080210679038117
 MonoBehaviour:

@@ -5,7 +5,7 @@ public class DoorSwitch : MonoBehaviour, IInteractable
 
     public GameObject door;
     private Animator doorAnimator;
-    private string interactMessage = "Press 'E' to open the door";
+    private string interactMessage = "Press 'F' to open the door";
 
     void Start()
     {

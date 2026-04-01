@@ -10,6 +10,7 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Instance;
     //public GameEvent setScene;
     public GameObject loadCanvas;
+    public GameEvent changeBGM;
     public Slider slider;
     private CanvasGroup loadCanvasGroup;
     private float fadeDuration = 1f;
@@ -88,10 +89,12 @@ public class LevelManager : MonoBehaviour
         if(sceneName == "Main Menu")
         {
             await LoadScene("TutorialLevel");
+            changeBGM.Raise(this, 3);
 
         } else if (sceneName == "TutorialLevel")
         {
             await LoadScene("Second Scene");
+            changeBGM.Raise(this, 4);
 
         } else if (sceneName == "Second Scene")
         {
@@ -99,13 +102,24 @@ public class LevelManager : MonoBehaviour
         } else if (sceneName == "Third Scene")
         {
             await LoadScene("Laser hallway");
+            changeBGM.Raise(this, 3);
         } else if (sceneName == "Laser hallway")
         {
             await LoadScene("Level 1");
+            changeBGM.Raise(this, 6);
         } else if (sceneName == "Level 1")
         {
+            await LoadScene("Final boss cutscene");
+            changeBGM.Raise(this, 7);
+        } else if (sceneName == "Final boss cutscene")
+        {
+            await LoadScene("End Credits");
+            changeBGM.Raise(this, 0);
+        }
+        else if (sceneName == "End Credits")
+        {
             await LoadScene("Main Menu");
-        } 
+        }
 
         // if (sceneName == "Main Menu")
         // {

@@ -4,10 +4,12 @@ public class MainMenu_Start : MonoBehaviour
 {
     public GameEvent nextLevel;
     public GameEvent quitLevel;
+    public ItemCount itemCount;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        itemCount.count = 0;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }

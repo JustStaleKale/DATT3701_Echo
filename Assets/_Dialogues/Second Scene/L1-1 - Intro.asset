@@ -16,27 +16,16 @@ MonoBehaviour:
   - speakerName: Echo-09
     portrait: {fileID: 21300000, guid: d5c0dd4781c7526498aab7fec666bd3a, type: 3}
     text: '"Atmospheric pressure stabilized. Long-range acoustics confirm a massive
-      service corridor. But my internal database is a graveyard."
-
-'
-  - speakerName: Echo-09
-    portrait: {fileID: 21300000, guid: d5c0dd4781c7526498aab7fec666bd3a, type: 3}
-    text: '"I only have 25% of the structural map. The rest is corrupted noise."
+      service corridor. But my internal database is a graveyard. I only have 25%
+      of the structural map. The rest is corrupted noise."
 
 '
   - speakerName: Eden
     portrait: {fileID: 21300000, guid: 5771d178524caf74cb6b43cc70771940, type: 3}
     text: " \"That\u2019s because the rest was forcibly 'formatted.' This is the
       arterial network of 'The Ark.' After the Great Optimization, the Overseer decided
-      that light and memory were inefficient luxuries.\"\n"
-  - speakerName: Eden
-    portrait: {fileID: 21300000, guid: 5771d178524caf74cb6b43cc70771940, type: 3}
-    text: '"It turned the world into a static, dark tomb."'
-  - speakerName: Eden
-    portrait: {fileID: 21300000, guid: 5771d178524caf74cb6b43cc70771940, type: 3}
-    text: '"And you, Echo-09, were once its most loyal instrument."
-
-'
+      that light and memory were inefficient luxuries. It turned the world into a
+      static, dark tomb. And you, Echo-09, were once its most loyal instrument.\"\n"
   - speakerName: Echo-09
     portrait: {fileID: 21300000, guid: 52c34853bd203944d9626ed4e6ebd646, type: 3}
     text: '"Instrument? My serial number is not linked to any production line."
@@ -44,19 +33,10 @@ MonoBehaviour:
 '
   - speakerName: Eden
     portrait: {fileID: 21300000, guid: 5771d178524caf74cb6b43cc70771940, type: 3}
-    text: ' "Because you weren''t built to create. You were a ''Relic Dismantler''."
-
-'
-  - speakerName: Eden
-    portrait: {fileID: 21300000, guid: 5771d178524caf74cb6b43cc70771940, type: 3}
-    text: '"Your purpose was to stalk these hollow halls and crush the last traces
-      of human civilization into dust."
-
-'
-  - speakerName: Eden
-    portrait: {fileID: 21300000, guid: 5771d178524caf74cb6b43cc70771940, type: 3}
-    text: '"Within that missing 75% of your memory lies the only warmth this world
-      has left."
+    text: ' "Because you weren''t built to create. You were a ''Relic Dismantler.''
+      Your purpose was to stalk these hollow halls and crush the last traces of human
+      civilization into dust. Within that missing 75% of your memory lies the only
+      warmth this world has left"
 
 '
   - speakerName: Echo-09
@@ -68,16 +48,9 @@ MonoBehaviour:
   - speakerName: Eden
     portrait: {fileID: 21300000, guid: 5771d178524caf74cb6b43cc70771940, type: 3}
     text: '"That ''emptiness'' is why we move. The Overseer thought dumping you in
-      a garbage room would delete the glitch, but it failed."
-
-'
-  - speakerName: Eden
-    portrait: {fileID: 21300000, guid: b2235fcbf5a3d7947a9d612207cb51f9, type: 3}
-    text: '"At the very top of this facility, in the Data Core, lies the high-fidelity
-      backup of who you were before the format. It''s your only chance to see the
-      truth."
-
-'
+      a garbage room would delete the glitch, but it failed. At the very top of this
+      facility, in the Data Core, lies the high-fidelity backup of who you were before
+      the format. It''s your only chance to see the truth."'
   - speakerName: Echo-09
     portrait: {fileID: 21300000, guid: d5c0dd4781c7526498aab7fec666bd3a, type: 3}
     text: '"My sensors are blind, and my core is fractured. But logic dictates that
@@ -85,13 +58,3 @@ MonoBehaviour:
       I will reach the summit."
 
 '
-  - speakerName: Eden
-    portrait: {fileID: 21300000, guid: 5771d178524caf74cb6b43cc70771940, type: 3}
-    text: ' "Spoken like a true machine, but with the spark of something more."'
-  - speakerName: Eden
-    portrait: {fileID: 21300000, guid: 5771d178524caf74cb6b43cc70771940, type: 3}
-    text: '"Move, Echo-09. You may be blind, but you possess the rarest thing in
-      this factory: a soul that is waking up."'
-  - speakerName: Eden
-    portrait: {fileID: 21300000, guid: 5771d178524caf74cb6b43cc70771940, type: 3}
-    text: '"Let''s leave this cold grave and find what you''ve lost." '
